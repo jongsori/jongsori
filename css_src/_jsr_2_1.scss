@@ -1,0 +1,37 @@
+.about{
+  background-image: url("../images/2_1_main_image.png");
+  height: 100vh;
+}
+
+.inner-box{
+  width:850px;
+  margin:0 auto;
+  padding-left:240px;
+}
+
+.content{
+
+  &-title{
+    color: #fff;
+    position: absolute;
+    top: 25%;
+    left: 55%;
+    font-size: 36px;
+    text-align: center;
+    margin-left: -140px;
+
+    &-text{
+      color: #fff;
+      text-align: center;
+      width: 540px;
+      height: 458px;
+      font-size: 18px;
+      top: 40%;
+      left: 55%;
+      position: absolute;
+      margin-left: -275px;
+      line-height: 1.6;
+    }
+
+  }
+}
