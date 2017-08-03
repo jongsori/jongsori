@@ -1,5 +1,5 @@
 .quick-guide{
-  background:url("../images/bg-3-1-1.png") no-repeat;
+  background:url("../images/bg-3-1-1.png") no-repeat fixed;
 
 }
 
@@ -23,10 +23,46 @@
 
 }
 
-.course-select{
-  width:850px;
-  height:68px;
-  border:3px solid #ffcd12;
-  box-sizing:border-box;
+.course{
 
+  &-select{
+    width:850px;
+    height:68px;
+    border:3px solid #ffcd12;
+    box-sizing:border-box;
+    font-size:20px;
+    text-align:center;
+    padding-top:20px;
+  }
+
+  &-list{
+    @extend %clearfix;
+    margin-top:50px;
+
+    &-item{
+      float:left;
+      margin-right:73px;
+
+      &:last-child{
+        margin-right:0;
+      }
+
+    }
+
+  }
+
+  &-wrap{
+    font-size:15px;
+    padding:0 50px;
+    @extend %clearfix;
+
+    .route{
+      float:left;
+    }
+
+    .time-distance{
+      float:right;
+
+    }
+  }
 }
