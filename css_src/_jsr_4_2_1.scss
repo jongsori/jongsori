@@ -1,21 +1,71 @@
+.section{
+  height: 3000px;
+  background: #000;
+  z-index: 99999999999999;
+}
 .review{
-  background:url("../images/review-bg.jpg") no-repeat 0 0;
-
-  &-photo{
-    width: 850px;
-    height: 690px;
-
-    &-list1{
-      width: 274px;
-      height: 306px;
-      box-shadow: 10px;
-      &-item{
-
-      }
-    }
+  background:url("../images/review-bg.jpg") no-repeat 0 0 ;
   }
 
+
+.photo{
+ width: 1050px;
+
+  &-list{
+
+    &-item{
+      overflow: hidden;
+      width: 274px;
+      height:306px;
+      float: left;
+      margin-right: 14px;
+      padding-bottom: 78px;
+
+      &-mask{
+          width: 274px;
+          height: 306px;
+          overflow: hidden;
+          position: relative;
+          margin: 0 auto;
+          cursor: pointer;
+      }
+
+      &-mask:hover:before{
+        display: block;
+      }
+
+
+      &-mask:hover:after{
+        display: block;
+      }
+
+
+      &-mask:before{
+        content:"";
+        display:none;
+
+        width:274px;
+        height:306px;
+        background:#000;
+        opacity:0.6;
+
+        position:absolute;
+        top:0;
+        left:0;
+      }
+
+      &-mask:after{
+        content:"";
+        display:none;
+
+        //width:58px;
+        //height:58px;
+        //position:absolute;
+        //top:50%;
+        //left:50%;
+        //margin:-29px 0 0 -29px;
+      }
+    }
+
+  }
 }
-
-
-
