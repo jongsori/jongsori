@@ -1,26 +1,46 @@
 .quick-guide{
-  background:url("../images/bg-3-1-1.png") no-repeat fixed;
+  background:url("../images/bg-3-1-1.png") no-repeat ;
 
 }
 
-.map-list{
-
-  &-item{
-
-  }
-
-}
-
-.item-map{
+.map{
   display:block;
 
-  &-mask{
+  &-list{
     width:850px;
     height:498px;
     overflow:hidden;
     margin-bottom:50px;
-  }
 
+    &-item{
+
+      &-map{
+        width:100%;
+        position:relative;
+
+        &.map1{
+          top:-35px;
+          left:0;
+        }
+        &.map2{
+          top:-70px;
+          left:0;
+        }
+        &.map3{
+          top:-90px;
+          left:0;
+        }
+        &.map4{
+          top:-70px;
+          left:0;
+        }
+        &.map5{
+          top:-30px;
+          left:0;
+        }
+      }
+    }
+  }
 }
 
 .course{
@@ -46,9 +66,7 @@
       &:last-child{
         margin-right:0;
       }
-
     }
-
   }
 
   &-wrap{
