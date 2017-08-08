@@ -5,16 +5,19 @@
 </script>
 
 <section>
-  <video id="video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-    <source src="동영상 주소">
-  </video>
+  <div class="video-wrap">
+    <video class="video" autoplay id="video" preload="auto" loop="loop" muted="muted" volume="0">
+      <source src="../images/jongsori.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="dimmed"></div>
 
-  <div>
-    <div>22˚C</div>
-    <ul>
-      <li>USD 1$ KRW 1,120₩</li>
-      <li>CNY 1Y KRW 166₩</li>
-      <li>JPY 100Ұ KRW 1,004₩</li>
+  <div class="widget">
+    <div class="weather">22˚C</div>
+    <ul class="exchange-rate-list">
+      <li class="exchange-rate-list-item">USD 1$ KRW 1,120₩</li>
+      <li class="exchange-rate-list-item">CNY 1Y KRW 166₩</li>
+      <li class="exchange-rate-list-item">JPY 100Ұ KRW 1,004₩</li>
     </ul>
   </div>
 </section>
