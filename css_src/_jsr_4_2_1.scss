@@ -7,6 +7,35 @@
   }
 
 
+.inner-box{
+
+  &:before{
+    content: "";
+    display: block;
+    clear: both;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 662px;
+    left: 1262px;
+    z-index: 9999;
+    background: url(../images/image_sprite.png) no-repeat 52px 78px;
+  }
+
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 662px;
+    left: 562px;
+    z-index: 9999;
+    background: url(../images/image_sprite.png) no-repeat 52px 78px;
+  }
+}
+
 .photo {
   width: 1050px;
 
@@ -136,6 +165,8 @@
       }
     }
   }
+
+
 
 }
 
