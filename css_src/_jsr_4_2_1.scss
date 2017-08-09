@@ -3,43 +3,47 @@
 
 }
 .review{
-  background:url("../images/review-bg.jpg") no-repeat 0 0 ;
+  width: 1920px;
+  height: 1080px;
+  background: url(../images/review-bg.jpg) no-repeat fixed;
   }
 
 
 .inner-box{
 
+
+}
+
+.photo {
+  width: 1050px;
+
   &:before{
     content: "";
     display: block;
     clear: both;
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 50px;
     position: absolute;
-    top: 662px;
-    left: 1262px;
+    top: 577px;
+    left: 584px;
     z-index: 9999;
-    background: url(../images/image_sprite.png) no-repeat 52px 78px;
+    background: url(../images/image_sprite.png) no-repeat -265px -170px;
+    cursor: pointer;
   }
 
   &:after{
     content: "";
     display: block;
     clear: both;
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 50px;
     position: absolute;
-    top: 662px;
-    left: 562px;
+    top: 577px;
+    right: 334px;
     z-index: 9999;
-    background: url(../images/image_sprite.png) no-repeat 52px 78px;
+    background: url(../images/image_sprite.png) no-repeat -300px -170px;
+    cursor: pointer;
   }
-}
-
-.photo {
-  width: 1050px;
-
-
 
   &-list {
 
@@ -59,51 +63,52 @@
         overflow: hidden;
         position: relative;
         margin: 0 auto;
-        cursor: pointer;
+
+
+
+        &-h{
+
+          width: 274px;
+          height: 306px;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          &:hover:before {
+            display: block;
+          }
+
+          &:before {
+            content: "";
+            display:none;
+            width: 274px;
+            height: 306px;
+            background: #000;
+            opacity: 0.6;
+            position: absolute;
+            top:0;
+            left: 0;
+          }
+        }
+        &-heading{
+          font-weight: bold;
+          top: 40%;
+          width: 274px;
+          position: absolute;
+          text-align: center;
+
+
+
+          &:hover{
+            content: "";
+            display:block;
+            clear: both;
+            top:40%;
+
+          }
+        }
 
       }
-
-
-      &-mask:hover:before {
-        display: block;
-      }
-
-      &-mask:hover:after {
-        display: block;
-      }
-
-      &-mask:before {
-        content: "";
-        display:none;
-        width: 274px;
-        height: 306px;
-        background: #000;
-        opacity: 0.6;
-        position: absolute;
-        top:0;
-        left: 0;
-      }
-
-      &-mask:after {
-        content: "";
-        display: none;
-      }
-
-
-      &-h{
-        width: 274px;
-        position: absolute;
-        top: 129px;
-        left: 77px;
-        margin: 0 auto;
-        text-align: center;
-        font-weight: bold;
-        z-index: 999;
-
-      }
-
-
-
       .item-wrap {
         width: 850px;
         height: 690px;
