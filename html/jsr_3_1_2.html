@@ -56,6 +56,10 @@
   </ul>
 </header>
 
+<script>
+  var page = 'sub';
+</script>
+
 <section class="section custom-guide">
   <div class="inner-box">
     <div class="title">
@@ -63,26 +67,56 @@
       <h2 class="title-eng">CUSTOM GUIDE.</h2>
     </div>
 
-    <div>
+    <div class="map">
       <img src="../images/course1.png" />
     </div>
 
-    <div>
-      <div>코스를 선택하세요.</div>
-      <div>
-        <input type="button" value="reload" />
+    <div class="place">
+      <div class="place-select" title="하단의 장소를 선택하면 선택된 경로가 표시됩니다.">장소를 선택하세요.</div>
+      <div class="place-reload">
+        <a class="place-reload-btn"></a>
       </div>
-      <ul>
-        <li><a href="#">경복궁</a></li>
-        <li><a href="#">광장시장</a></li>
-        <li><a href="#">낙산공원</a></li>
-        <li><a href="#">대림미술관</a></li>
-        <li><a href="#">동대문</a></li>
-        <li><a href="#">북촌한옥마을</a></li>
-        <li><a href="#">삼청공원</a></li>
-        <li><a href="#">쌈지길</a></li>
-        <li><a href="#">종묘</a></li>
-        <li><a href="#">창경궁</a></li>
+      <ul class="place-list">
+        <li class="place-list-item">
+          <input id="kyougbok" type="checkbox" value="경복궁" name="place" />
+          <label for="kyougbok">경복궁</label>
+        </li>
+        <li class="place-list-item">
+          <input id="gwangjang" type="checkbox" value="광장시장" name="place" />
+          <label for="gwangjang">광장시장</label>
+        </li>
+        <li class="place-list-item">
+          <input id="naksan" type="checkbox" value="낙산공원" name="place" />
+          <label for="naksan">낙산공원</label>
+        </li>
+        <li class="place-list-item">
+          <input id="daelim" type="checkbox" value="대림미술관" name="place" />
+          <label for="daelim">대림미술관</label>
+        </li>
+        <li class="place-list-item right">
+          <input id="dongdaemun" type="checkbox" value="동대문" name="place" />
+          <label for="dongdaemun">동대문</label>
+        </li>
+        <li class="place-list-item">
+          <input id="hanok" type="checkbox" value="북촌한옥마을" name="place" />
+          <label for="hanok">북촌한옥마을</label>
+        </li>
+        <li class="place-list-item">
+          <input id="samcheong" type="checkbox" value="삼청공원" name="place" />
+          <label for="samcheong">삼청공원</label>
+        </li>
+        <li class="place-list-item">
+          <input id="ssamji" type="checkbox" value="쌈지길" name="place" />
+          <label for="ssamji">쌈지길</label>
+        </li>
+        <li class="place-list-item">
+          <input id="jongmyo" type="checkbox" value="종묘" name="place" />
+          <label for="jongmyo">종묘</label>
+        </li>
+        <li class="place-list-item right">
+          <input id="changkyung" type="checkbox" value="창경궁" name="place" />
+          <label for="changkyung">창경궁</label>
+        </li>
       </ul>
     </div>
   </div>
@@ -107,3 +141,10 @@
 </footer>
 
 
+
+
+
+</body>
+
+
+</html>
