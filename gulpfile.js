@@ -58,7 +58,6 @@ gulp.task('gnb', function() {
       .pipe(gulp.dest('js/'));
 });
 
-
 gulp.task('jsconcat', ['gnb']);
 
 gulp.task('default', ['livereload', 'include', 'sass', 'jsconcat', 'watch']);

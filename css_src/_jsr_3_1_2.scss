@@ -1,19 +1,104 @@
 .custom-guide{
-  background:url("../images/bg-3-1-2.png") no-repeat ;
+  background:url("../images/bg-3-1-2.png") no-repeat fixed;
 
+}
+
+.choice-place{
+  float:left;
+  text-align: center;
+  margin-left:10px;
+  font-size: 15px;
 }
 
 .place {
   position:relative;
 
+  &-wrap{
+    margin-left: 20px;
+  }
+
+  &-view{
+    width: 850px;
+    height: 68px;
+    position:relative;
+
+    // 아랫줄
+    &:after{
+      content:"";
+      display:block;
+      width:100px;
+      height:3px;
+      background:#ffcd12;
+      position:absolute;
+      bottom:0;
+      left:50%;
+      transform:translateX(-50%);
+      transition:all .5s ease-out;
+    }
+
+    &.frame1:after{
+      width:100%;
+    }
+
+    // 왼쪽 줄
+    &:before{
+      content:"";
+      display:block;
+      width:3px;
+      height:0;
+      background:#ffcd12;
+      position:absolute;
+      left:0;
+      bottom:0;
+      transition:all .5s ease-out;
+    }
+
+    &.frame2:before{
+      height:100%;
+    }
+  }
+
   &-select {
     width: 850px;
     height: 68px;
-    border: 3px solid #ffcd12;
     box-sizing: border-box;
     font-size: 20px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 26px;
+
+    // 윗줄
+    &:before{
+      content:"";
+      display:block;
+      width:0;
+      height:3px;
+      background:#ffcd12;
+      position:absolute;
+      right:0;
+      top:0;
+      transition:all .4s ease-out;
+    }
+
+    &.frame3:before{
+      width:100%;
+    }
+
+    // 오른쪽 줄
+    &:after{
+      content:"";
+      display:block;
+      width:3px;
+      height:0;
+      background:#ffcd12;
+      position:absolute;
+      right:0;
+      bottom:0;
+      transition:all .1s ease-out;
+    }
+
+    &.frame2:after{
+      height:100%;
+    }
   }
 
   &-reload{
@@ -25,9 +110,12 @@
       width: 24px;
       height: 30px;
       background:url("../images/image_sprite.png") no-repeat -200px -255px;
-      display: block;
+      display: none;
       position: absolute;
 
+      &.on{
+        display: block;
+      }
     }
   }
 
@@ -43,13 +131,11 @@
 
 }
 
-
 .map {
   display: block;
   width: 850px;
   height: 498px;
   overflow: hidden;
   margin-bottom: 50px;
-
 
 }
