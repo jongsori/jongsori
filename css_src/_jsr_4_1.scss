@@ -1,89 +1,82 @@
-.section-tip {
-  width: 100%;
-  height: 100%;
-  background: url(../images/image_bg.jpg) no-repeat center fixed;
+.section {
 
-  .tip {
+  .tipmain {
+    width: 100%;
+    height: 100%;
+    background: url(../images/4-1-bg.jpg) no-repeat center fixed;
 
+    .tip {
 
-
-    &-list {
-      border-top: 2px solid #ddd;
-      border-bottom: 2px solid #ddd;
-      box-sizing: border-box;
-
-      &-item {
-        height: 100%;
-        border-bottom: 1px solid #ddd;
+      &-list {
+        border-top: 2px solid #ddd;
+        border-bottom: 2px solid #ddd;
         box-sizing: border-box;
-        line-height: 100px;
 
-
-
-
-        &:before {
-          content: "";
-          display: block;
-          width: 72px;
-          border: 1px solid #d7d7d7;
+        &-item {
+          height: 100%;
+          border-bottom: 1px solid #ddd;
           box-sizing: border-box;
-          position: relative;
-          top: 50px;
-        }
+          line-height: 100px;
 
-      }
-
-      &-link {
-        font-size: 20px;
-        color: #fff;
-        margin-left: 80px;
-
-
-
-        &:after {
-          content: "";
-          display: block;
-          width: 26px;
-          height: 14px;
-          float: right;
-          position: relative;
-          top: 45px;
-          right: 32px;
-          background: url(../images/image_sprite.png) no-repeat -293px -255px;
-
-
-        }
-      }
-
-      &-detail {
-
-        //height:0;
-        overflow: hidden;
-        transition: height .5s ease-out;
-
-
-        &-wrap {
-          background: rgba(128, 128, 128, 0.3);
-          padding: 40px 90px 50px;
-          border-top: 1px solid #ffcd12;
-          //border-bottom:1px solid #ffcd12;
-          box-sizing: border-box;
-
+          &:before {
+            content: "";
+            display: block;
+            width: 72px;
+            border: 1px solid #d7d7d7;
+            box-sizing: border-box;
+            position: relative;
+            top: 50px;
+          }
 
         }
 
-        &-contents {
-          line-height: 2em;
-          font-size: 15px;
+        &-link {
+          font-size: 20px;
           color: #fff;
+          margin-left: 80px;
+
+          &:after {
+            content: "";
+            display: block;
+            width: 26px;
+            height: 14px;
+            float: right;
+            position: relative;
+            top: 45px;
+            right: 32px;
+            background: url(../images/image_sprite.png) no-repeat -293px -255px;
+
+          }
         }
 
-        &-heading{
-          font-size:20px;
-          color: #fff;
-          font-weight:bold;
+        &-detail {
+
+          //height:0;
+          overflow: hidden;
+          transition: height .5s ease-out;
+
+          &-wrap {
+            background: rgba(128, 128, 128, 0.3);
+            padding: 40px 90px 50px;
+            border-top: 1px solid #ffcd12;
+            //border-bottom:1px solid #ffcd12;
+            box-sizing: border-box;
+
+          }
+
+          &-contents {
+            line-height: 2em;
+            font-size: 15px;
+            color: #fff;
+          }
+
+          &-heading {
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+          }
+        }
       }
     }
-  }
   }
 }
