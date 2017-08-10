@@ -173,12 +173,35 @@
 
 
 
+
+
 }
 
 
 
+.radio-box{
+  width: 200px;
+  height: 16px;
+  margin-left: 376px;
+  bottom: -400px;
+  position:absolute;
+
+  &-item{
+    float: left;
+    width: 20px;
+    height: 20px;
 
 
+    .current{
+      content: "";
+      display: block;
+      clear: both;
+      float: left;
+      margin-left: 20px;
+    }
+  }
+
+}
 
 
 
