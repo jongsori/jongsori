@@ -35,4 +35,28 @@ $(function(){
 
   });
 
+  $('.course-list-item').on('click', function(){
+
+    // 아랫줄 모션적용 클래스 - 1초
+    $('.course-view').addClass('frame1');
+
+    setTimeout(function(){
+
+      // 왼쪽 줄 모션 적용 클래스 - 1초
+      $('.course-view').addClass('frame2');
+      // 오른쪽 줄 모션 적용 클래스 - 0.5초
+      $('.course-select').addClass('frame2');
+
+    }, 500);
+
+    // 윗줄 모션
+    setTimeout(function(){
+
+      $('.course-select').addClass('frame3');
+
+    }, 600);
+
+
+  });
+
 });
