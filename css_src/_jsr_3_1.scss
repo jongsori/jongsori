@@ -35,19 +35,41 @@
      &-heading{
        text-align: center;
        position: absolute;
-       margin-top: 49px;
+       margin: 49px  115px;
        font-size: 30px;
 
-       &:after{
-         content:"";
+       &:before{
+         content: "";
          display: block;
+         clear: both;
+         position: absolute;
          width: 68px;
          height: 100px;
-         margin: 70px 160px 80px;
-         background: url("../images/image_sprite.png") no-repeat -1px -285px;
+         margin: 120px 47px;
+         background: url(../images/image_sprite.png) no-repeat -1px -285px;
        }
 
+       &-R{
+         text-align: center;
+         position: absolute;
+         margin: 49px  115px;
+         font-size: 30px;
+
+         &:after{
+           content: "";
+           display: block;
+           clear: both;
+           position: absolute;
+           width: 68px;
+           height: 100px;
+           margin: 93px 47px;
+           background: url(../images/image_sprite.png) no-repeat -72px -285px;
+         }
+       }
      }
+
+
+
 
      &-p{
        width: 374px;

@@ -58,9 +58,31 @@ gulp.task('gnb', function() {
       .pipe(gulp.dest('js/'));
 });
 
+<<<<<<< HEAD
+gulp.task('jsrTip', function() {
+  return gulp.src('js_src/*.js')
+      .pipe(sourcemaps.init())
+      .pipe(concat('jsr_4_1.js'))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('js/'));
+});
+
+gulp.task('jsrFaq', function() {
+  return gulp.src('js_src/*.js')
+      .pipe(sourcemaps.init())
+      .pipe(concat('jsr_4_3.js'))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('js/'));
+});
+
+
+
+gulp.task('jsconcat', ['gnb', 'jsrTip', 'jsrFaq']);
+=======
 
 
 
 gulp.task('jsconcat', ['gnb']);
+>>>>>>> 995ea3d9a339b437b6da7ed5fe2467836f7ca4f4
 
 gulp.task('default', ['livereload', 'include', 'sass', 'jsconcat', 'watch']);
