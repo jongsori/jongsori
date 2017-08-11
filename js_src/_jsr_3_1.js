@@ -3,18 +3,18 @@
  */
 
 
-//$(function(){
-//  icon_Moving();
-//
-//
-//  function icon_Moving() {
-//    $("").animate({marginTop: "30px"}, 700, "", function () {
-//      $(this)
-//          .animate({marginTop: "0px"}, 500, "", function () {
-//            //자기 호출
-//            icon_Moving();
-//          });
-//    });
-//
-//
-//  });
+$(function(){
+
+  $('.guide-box').on('mouseenter', function(){
+
+    $(this).children('.guide-box-heading').addClass('on');
+
+  });
+
+  $('.guide-box').on('mouseleave', function(){
+
+    $(this).children('.guide-box-heading').removeClass('on');
+
+  });
+
+});
