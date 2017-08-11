@@ -12,78 +12,87 @@
    height: 434px;
    position: relative;
 
+
+
    &-quick{
      width: 418px;
      height: 434px;
      float: left;
      border: 10px solid #fff;
      box-sizing: border-box;
-     margin-right: 14px;
+     margin-right:0;
+
+     &:hover{
+       content: "";
+       display: block;
+       clear: both;
+       cursor: pointer;
+       border: 10px solid #ffcd12;
+
+     }
+
 
      &-heading{
        text-align: center;
        position: absolute;
-       margin-top: 49px;
+       margin: 49px  115px;
        font-size: 30px;
 
-       &:after{
-         content:"";
+       &:before{
+         content: "";
          display: block;
+         clear: both;
+         position: absolute;
          width: 68px;
          height: 100px;
-         margin: 70px 160px 80px;
-         background: url("../images/image_sprite.png") no-repeat -1px -285px;
+         margin: 120px 47px;
+         background: url(../images/image_sprite.png) no-repeat -1px -285px;
        }
 
-     }
-
-     &-p{
-       text-align: center;
-       position: absolute;
-       margin: 320px 100px 51px;
-     }
-   }
-
-
-   &-customize{
-     width: 418px;
-     height: 434px;
-     float: left;
-     border: 10px solid #fff;
-     box-sizing: border-box;
-
-
-       &-heading{
+       &-R{
          text-align: center;
          position: absolute;
-         margin-top: 49px;
+         margin: 49px  115px;
          font-size: 30px;
 
          &:after{
-           content:"";
+           content: "";
            display: block;
+           clear: both;
+           position: absolute;
            width: 68px;
            height: 100px;
-           margin: 70px 160px 80px;
-           background: url("../images/image_sprite.png") no-repeat -72px -285px;
+           margin: 93px 47px;
+           background: url(../images/image_sprite.png) no-repeat -72px -285px;
          }
-
-       }
-
-       &-p{
-         text-align: center;
-         position: absolute;
-         width: 257px;
-         margin: 320px 70px 51px;
        }
      }
 
 
-   //.on{
-   //  cursor: pointer;
-   //  border: #ffcd12;
-   //}
 
+
+     &-p{
+       width: 374px;
+       text-align: center;
+       line-height: 22px;
+       position: absolute;
+       margin: 320px 100px 51px 7px;
+       padding-bottom: 10px;
+
+     }
+   }
+
+   .right{
+     content: "";
+     display: block;
+     clear: both;
+     float: right;
+     top: 0;
+     right: 0;
+     position: absolute;
+
+
+   }
  }
 
 
