@@ -59,8 +59,6 @@ gulp.task('gnb', function() {
 });
 
 <<<<<<< HEAD
-gulp.task('jsconcat', ['gnb']);
-=======
 gulp.task('jsrTip', function() {
   return gulp.src('js_src/*.js')
       .pipe(sourcemaps.init())
@@ -80,6 +78,11 @@ gulp.task('jsrFaq', function() {
 
 
 gulp.task('jsconcat', ['gnb', 'jsrTip', 'jsrFaq']);
->>>>>>> 668651d50ab5f8b3ec5a03ed238ce901f153042d
+=======
+
+
+
+gulp.task('jsconcat', ['gnb']);
+>>>>>>> 995ea3d9a339b437b6da7ed5fe2467836f7ca4f4
 
 gulp.task('default', ['livereload', 'include', 'sass', 'jsconcat', 'watch']);
