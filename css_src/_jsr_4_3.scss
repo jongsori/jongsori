@@ -42,7 +42,18 @@
             top: 45px;
             right: 32px;
             background: url(../images/image_sprite.png) no-repeat -293px -255px;
+          }
 
+          &.up:after{
+            content: "";
+            display: block;
+            width: 26px;
+            height: 14px;
+            float: right;
+            position: relative;
+            top: 45px;
+            right: 32px;
+            background: url(../images/image_sprite.png) no-repeat -265px -255px;
           }
         }
 
