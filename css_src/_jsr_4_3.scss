@@ -70,20 +70,22 @@
             //border-bottom:1px solid #ffcd12;
             box-sizing: border-box;
 
+            &-contents {
+              line-height: 2em;
+              font-size: 15px;
+              color: #fff;
+            }
+
+            &-heading {
+              font-size: 20px;
+              color: #fff;
+              font-weight: bold;
+            }
+
 
           }
 
-          &-contents {
-            line-height: 2em;
-            font-size: 15px;
-            color: #fff;
-          }
 
-          &-heading {
-            font-size: 20px;
-            color: #fff;
-            font-weight: bold;
-          }
         }
       }
     }
