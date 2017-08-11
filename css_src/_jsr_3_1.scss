@@ -7,36 +7,33 @@
   background:url("../images/choice-guide-bg.jpg") no-repeat fixed ;
 }
 
- .guide-box{
+ .guide-box {
    width: 850px;
    height: 434px;
    position: relative;
 
-
-
-   &-quick{
+   &-quick {
      width: 418px;
      height: 434px;
      float: left;
      border: 10px solid #fff;
      box-sizing: border-box;
-     margin-right:0;
+     margin-right: 0;
 
-     &:hover{
+     &:hover {
        @extend %clearfix;
        cursor: pointer;
        border: 10px solid #ffcd12;
 
      }
 
-
-     &-heading{
+     &-heading {
        text-align: center;
        position: absolute;
-       margin: 49px  115px;
+       margin: 49px 115px;
        font-size: 30px;
 
-       &:before{
+       &:before {
          content: "";
          display: block;
          clear: both;
@@ -45,15 +42,32 @@
          height: 100px;
          margin: 120px 47px;
          background: url(../images/image_sprite.png) no-repeat -1px -285px;
+         -webkit-animation:mymove 3s infinite;
+         animation: mymove 3s infinite;
        }
 
-       &-R{
+       @keyframes mymove {
+         0% {
+           top: 100px;
+         }
+         25% {
+           top: 150px;
+         }
+         75% {
+           top: 50px
+         }
+         100% {
+           top: 0;
+         }
+       }
+
+       &-R {
          text-align: center;
          position: absolute;
-         margin: 49px  115px;
+         margin: 49px 115px;
          font-size: 30px;
 
-         &:after{
+         &:after {
            @extend %clearfix;
            position: absolute;
            width: 68px;
@@ -64,10 +78,7 @@
        }
      }
 
-
-
-
-     &-p{
+     &-p {
        width: 374px;
        text-align: center;
        line-height: 22px;
@@ -78,15 +89,14 @@
      }
    }
 
-   .right{
+   .right {
      @extend %clearfix;
      float: right;
      top: 0;
      right: 0;
      position: absolute;
 
-
    }
- }
 
+ }
 
