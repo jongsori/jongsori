@@ -1,4 +1,5 @@
 
+
 $(function(){
 
   function init(){
@@ -27,7 +28,7 @@ $(function(){
       height : 0
     });
 
-    $listLink.parent().siblings().children('.tip-list-link').data('open', 'false').removeClass('up');
+    $listLink.parent().siblings().children('.tip-list-link').data('open', 'false').removeClass('up').css("color", "#ddd");
   }
 
   function menuSelfClose( $listLink ){
@@ -41,12 +42,12 @@ $(function(){
 
 
 
-
   init();
 
   $('.tip-list-link').on('click', function(e){
 
     e.preventDefault();
+
 
     if( $(this).data('open') == 'false') {
 
@@ -61,4 +62,8 @@ $(function(){
     }
   });
 
+
 });
+
+
+

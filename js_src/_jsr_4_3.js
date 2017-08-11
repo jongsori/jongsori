@@ -27,7 +27,7 @@ $(function(){
       height : 0
     });
 
-    $listLink.parent().siblings().children('.faq-list-link').data('open', 'false').removeClass('up');
+    $listLink.parent().siblings().children('.faq-list-link').data('open', 'false').removeClass('up').css("color", "#ddd");
   }
 
   function menuSelfClose( $listLink ){
