@@ -120,12 +120,13 @@
   }
 
   &-list{
+    padding: 40px 0;
     @extend %clearfix;
 
     &-item{
       float:left;
       width:130px;
-      margin:40px 50px 0 0;
+      margin: 0 50px 40px 0;
 
       &.right{
         margin-right:0;
