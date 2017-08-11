@@ -18,9 +18,7 @@
   width: 1050px;
 
   &:before{
-    content: "";
-    display: block;
-    clear: both;
+    @extend %clearfix;
     width: 34px;
     height: 50px;
     position: absolute;
@@ -32,9 +30,7 @@
   }
 
   &:after{
-    content: "";
-    display: block;
-    clear: both;
+    @extend %clearfix;
     width: 33px;
     height: 50px;
     position: absolute;
@@ -100,9 +96,7 @@
 
 
           &:hover{
-            content: "";
-            display:block;
-            clear: both;
+            @extend %clearfix;
             top:40%;
 
           }
@@ -152,9 +146,7 @@
           }
         }
         .item-story:after {
-          content: "";
-          display: block;
-          clear: both;
+          @extend %clearfix;
         }
 
         .item-story-paragraph {
@@ -194,9 +186,7 @@
 
     .current{
       &:hover{
-        content: "";
-        display: block;
-        clear: both;
+        @extend %clearfix;
         color: #ffcd12;
       }
     }
