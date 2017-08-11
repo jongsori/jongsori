@@ -7,32 +7,36 @@
   background:url("../images/choice-guide-bg.jpg") no-repeat fixed ;
 }
 
- .guide-box {
-   width: 850px;
+.guide{
+ width: 850px;
+ height: 434px;
+ position: relative;
+
+ &-box {
+   width: 418px;
    height: 434px;
-   position: relative;
+   float: left;
+   border: 10px solid #fff;
+   box-sizing: border-box;
+   margin-right: 0;
+   cursor: pointer;
 
-   &-quick {
-     width: 418px;
-     height: 434px;
-     float: left;
-     border: 10px solid #fff;
-     box-sizing: border-box;
-     margin-right: 0;
+   &:hover {
+     border-color:#ffcd12;
+   }
 
-     &:hover {
-       @extend %clearfix;
-       cursor: pointer;
-       border: 10px solid #ffcd12;
+   &-heading {
+     text-align: center;
+     position: absolute;
+     margin: 49px 115px;
+     font-size: 30px;
 
+     &.on:before{
+       //-webkit-animation:mymove 3s infinite;
+       animation: mymove 1s infinite;
      }
 
-     &-heading {
-       text-align: center;
-       position: absolute;
-       margin: 49px 115px;
-       font-size: 30px;
-
+     &.quick{
        &:before {
          content: "";
          display: block;
@@ -42,61 +46,54 @@
          height: 100px;
          margin: 120px 47px;
          background: url(../images/image_sprite.png) no-repeat -1px -285px;
-         -webkit-animation:mymove 3s infinite;
-         animation: mymove 3s infinite;
        }
+     }
 
-       @keyframes mymove {
-         0% {
-           top: 100px;
-         }
-         25% {
-           top: 150px;
-         }
-         75% {
-           top: 50px
-         }
-         100% {
-           top: 0;
-         }
+     @keyframes mymove {
+       0% {
+         top: 0;
        }
+       50% {
+         top: -20px;
+       }
+       100% {
+         top: 0;
+       }
+     }
 
-       &-R {
-         text-align: center;
+     &.custom {
+       &:before {
+         content: "";
+         display: block;
+         clear: both;
          position: absolute;
-         margin: 49px 115px;
-         font-size: 30px;
-
-         &:after {
-           @extend %clearfix;
-           position: absolute;
-           width: 68px;
-           height: 100px;
-           margin: 93px 47px;
-           background: url(../images/image_sprite.png) no-repeat -72px -285px;
-         }
+         width: 68px;
+         height: 100px;
+         margin: 120px 47px;
+         background: url(../images/image_sprite.png) no-repeat -72px -285px;
        }
      }
-
-     &-p {
-       width: 374px;
-       text-align: center;
-       line-height: 22px;
-       position: absolute;
-       margin: 320px 100px 51px 7px;
-       padding-bottom: 10px;
-
-     }
    }
 
-   .right {
-     @extend %clearfix;
-     float: right;
-     top: 0;
-     right: 0;
+   &-paragraph {
+     width: 374px;
+     text-align: center;
+     line-height: 22px;
      position: absolute;
+     margin: 320px 100px 51px 7px;
+     padding-bottom: 10px;
 
    }
+ }
+
+ .right {
+   @extend %clearfix;
+   float: right;
+   top: 0;
+   right: 0;
+   position: absolute;
 
  }
+
+}
 
