@@ -37,7 +37,9 @@
        font-size: 30px;
 
        &:before{
-         @extend %clearfix;
+         content: "";
+         display: block;
+         clear: both;
          position: absolute;
          width: 68px;
          height: 100px;
