@@ -58,28 +58,9 @@ gulp.task('gnb', function() {
       .pipe(gulp.dest('js/'));
 });
 
-<<<<<<< HEAD
+
+
+
 gulp.task('jsconcat', ['gnb']);
-=======
-gulp.task('jsrTip', function() {
-  return gulp.src('js_src/*.js')
-      .pipe(sourcemaps.init())
-      .pipe(concat('jsr_4_1.js'))
-      .pipe(sourcemaps.write())
-      .pipe(gulp.dest('js/'));
-});
-
-gulp.task('jsrFaq', function() {
-  return gulp.src('js_src/*.js')
-      .pipe(sourcemaps.init())
-      .pipe(concat('jsr_4_3.js'))
-      .pipe(sourcemaps.write())
-      .pipe(gulp.dest('js/'));
-});
-
-
-
-gulp.task('jsconcat', ['gnb', 'jsrTip', 'jsrFaq']);
->>>>>>> 668651d50ab5f8b3ec5a03ed238ce901f153042d
 
 gulp.task('default', ['livereload', 'include', 'sass', 'jsconcat', 'watch']);
