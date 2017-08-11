@@ -86,6 +86,8 @@
 
     &-list{
 
+      @extend %clearfix;
+
       &-item{
         width: 202px;
         height: 128px;
