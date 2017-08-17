@@ -3,7 +3,7 @@
 
 }
 .review{
-  width: 1920px;
+  width: 1900px;
   height: 1080px;
   background: url(../images/review-bg.jpg) no-repeat fixed;
   }
@@ -17,33 +17,33 @@
 .photo {
   width: 1050px;
 
-  &:before{
-    @extend %clearfix;
-    width: 34px;
-    height: 50px;
-    position: absolute;
-    top: 577px;
-    left: 584px;
-    z-index: 9999;
-    background: url(../images/image_sprite.png) no-repeat -265px -170px;
-    cursor: pointer;
-  }
 
-  &:after{
-    @extend %clearfix;
-    width: 33px;
-    height: 50px;
-    position: absolute;
-    top: 577px;
-    right: 334px;
-    z-index: 9999;
-    background: url(../images/image_sprite.png) no-repeat -300px -170px;
-    cursor: pointer;
-  }
 
   &-list {
 
     position: relative;
+
+    &-button-right{
+      background: url(../images/image_sprite.png)no-repeat -265px -170px;
+      text-indent: -999999em;
+      width: 34px;
+      height: 50px;
+      position: absolute;
+      top: 575px;
+      left: 590px;
+      cursor: pointer;
+    }
+
+    &-button-left{
+      background: url(../images/image_sprite.png)no-repeat -299px -170px;
+      text-indent: -999999em;
+      width: 34px;
+      height: 50px;
+      position: absolute;
+      top: 575px;
+      right:352px;
+      cursor: pointer;
+    }
 
     &-item {
       overflow: hidden;
@@ -162,15 +162,7 @@
       }
     }
   }
-
-
-
-
-
 }
-
-
-
 .radio-box{
   width: 200px;
   height: 16px;
