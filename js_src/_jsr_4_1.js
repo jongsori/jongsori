@@ -60,7 +60,7 @@ $(function(){
       menuClose( $(this) );
 
 
-      } else {
+    } else {
 
       menuSelfClose( $(this) );
 
@@ -68,16 +68,5 @@ $(function(){
 
   });
 
-  $('.tip-list-link').on('mouseenter', function(){
-    $('.tip-list-link').css('color', '#ffcd12');
-
-  });
-
-
 
 });
-
-
-
-
-
