@@ -20,6 +20,7 @@ $(function(){
 
     $listLink.data({'open' : 'true'}).addClass('up').css("color","#ffcd12");
 
+
   }
 
   function menuClose( $listLink ){
@@ -28,7 +29,10 @@ $(function(){
     });
 
     $listLink.parent().siblings().children('.faq-list-link').data('open', 'false').removeClass('up').css("color", "#ddd");
+
   }
+
+
 
   function menuSelfClose( $listLink ){
 
@@ -37,12 +41,14 @@ $(function(){
     });
 
     $listLink.data({'open': 'false'}).removeClass('up').css("color","#ddd");
+
   }
 
 
 
 
   init();
+
 
   $('.faq-list-link').on('click', function(e){
 
@@ -54,19 +60,17 @@ $(function(){
       menuClose( $(this) );
 
 
-    } else {
 
-      menuSelfClose( $(this) );
+
+      } else {
+
+      menuSelfClose($(this));
 
     }
   });
 
-  $('.faq-list-link').hover(function(){
 
-    $(this).css('color', '#ffcd12');
-
-  }, function(){
-    $(this).css("color", "#ddd");
-  });
 
 });
+
+
