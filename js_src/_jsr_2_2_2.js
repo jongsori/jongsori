@@ -9,12 +9,6 @@ $(function(){
     $imageTop: $('.slide-wrap'),
     $imageBig: $('.slide-wrap-bigimage'),
     $imageThumb: $('.slide-list-image'),
-    areaWidth: 0,
-    areaHeight: 0,
-    imageWidth: 0,
-    imageHeight: 0,
-    areaRatio: 0,
-    imageRatio: 0,
 
     areaValue : function () {
       this.areaWidth = parseInt(this.$imageTop.css('width'));
@@ -56,9 +50,6 @@ $(function(){
     }
   };
 
-  calculateRatio.applyBig();
-  calculateRatio.applyThumb();
-
   $('.slide-list-item').on('mouseenter', function(){
     calculateRatio.changeImage( $(this) );
     calculateRatio.applyBig();
@@ -67,5 +58,12 @@ $(function(){
     calculateRatio.changeImage( $('.slide-list-item').eq(0) );
     calculateRatio.applyBig();
   });
+
+
+
+
+
+  // 화살표 클릭시
+
 
 });
