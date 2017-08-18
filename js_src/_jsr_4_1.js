@@ -21,6 +21,9 @@ $(function(){
 
     $listLink.data({'open' : 'true'}).addClass('up').css("color","#ffcd12");
 
+
+
+
   }
 
   function menuClose( $listLink ){
@@ -28,7 +31,10 @@ $(function(){
       height : 0
     });
 
-    $listLink.parent().siblings().children('.tip-list-link').data('open', 'false').removeClass('up').css("color", "#ddd");
+    $listLink.parent().siblings().children('.tip-list-link').data('open' , 'false').removeClass('up').css("color", "#ddd");
+
+
+
   }
 
   function menuSelfClose( $listLink ){
@@ -48,22 +54,30 @@ $(function(){
 
     e.preventDefault();
 
-
     if( $(this).data('open') == 'false') {
 
       menuOpen( $(this) );
       menuClose( $(this) );
 
 
-    } else {
+      } else {
 
       menuSelfClose( $(this) );
 
     }
+
+  });
+
+  $('.tip-list-link').on('mouseenter', function(){
+    $('.tip-list-link').css('color', '#ffcd12');
+
   });
 
 
+
 });
+
+
 
 
 

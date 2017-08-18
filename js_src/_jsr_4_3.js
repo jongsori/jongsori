@@ -61,4 +61,12 @@ $(function(){
     }
   });
 
+  $('.faq-list-link').hover(function(){
+
+    $(this).css('color', '#ffcd12');
+
+  }, function(){
+    $(this).css("color", "#ddd");
+  });
+
 });

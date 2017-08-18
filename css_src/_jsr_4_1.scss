@@ -1,99 +1,108 @@
 .section {
 
-    .tip {
+   .tip {
 
-      margin-bottom:189px;
+     margin-bottom:190px;
 
-      &-list {
-        border-top: 2px solid #ddd;
-        border-bottom: 1px solid #ddd;
-        box-sizing: border-box;
-
-        &-item {
-          height: 100%;
-          border-bottom: 1px solid #ddd;
-          box-sizing: border-box;
-          line-height: 100px;
+     &-list {
+       border-top: 2px solid #ddd;
+       border-bottom: 1px solid #ddd;
+       box-sizing: border-box;
+       position:relative;
 
 
+       &-item {
+         height: 100%;
+         border-bottom: 1px solid #ddd;
+         box-sizing: border-box;
 
-          &:before {
-            content: "";
-            display: block;
-            width: 72px;
-            border: 1px solid #d7d7d7;
-            box-sizing: border-box;
-            position: relative;
-            top: 50px;
-          }
-
-        }
-
-        &-link {
-          font-size: 20px;
-          color: #fff;
-          margin-left: 80px;
-
-          &:after {
-            content: "";
-            display: block;
-            width: 26px;
-            height: 14px;
-            float: right;
-            position: relative;
-            top: 45px;
-            right: 32px;
-            background: url(../images/image_sprite.png) no-repeat -293px -255px;
-
-          }
-
-          &.up:after{
-            content: "";
-            display: block;
-            width: 26px;
-            height: 14px;
-            float: right;
-            position: relative;
-            top: 45px;
-            right: 32px;
-            background: url(../images/image_sprite.png) no-repeat -265px -255px;
-          }
-        }
-
-        &-detail {
-
-          //height:0;
-          overflow: hidden;
-          transition: height .5s ease-out;
+         &:before {
+           content: "";
+           display: block;
+           width: 72px;
+           border: 1px solid #d7d7d7;
+           box-sizing: border-box;
+           position: absolute;
+           margin-top:50px;
+         }
 
 
-          &-wrap {
-            background: rgba(128, 128, 128, 0.3);
-            padding: 30px 90px;
-            border-top: 1px solid #ffcd12;
-            //border-bottom:1px solid #ffcd12;
-            box-sizing: border-box;
+       }
 
-            &-contents {
-              line-height: 2em;
-              font-size: 15px;
-              color: #fff;
-            }
-
-            &-heading {
-              display:inline;
-              font-size: 20px;
-              color: #fff;
-              font-weight: bold;
-            }
-
-          }
+       &-link {
+         display:block;
+         font-size: 20px;
+         color: #fff;
+         margin-left: 80px;
+         line-height: 104px;
+         box-sizing:border-box;
+         clear:both;
 
 
-        }
-      }
-    }
-  }
+
+         &:hover{
+           color:#ffcd12;
+         }
+
+         &:after {
+           content: "";
+           display: block;
+           width: 26px;
+           height: 14px;
+           float: right;
+           position: relative;
+           top: 45px;
+           right: 32px;
+           background: url(../images/image_sprite.png) no-repeat -293px -255px;
+
+         }
+
+         &.up:after{
+           content: "";
+           display: block;
+           width: 26px;
+           height: 14px;
+           float: right;
+           position: relative;
+           top: 45px;
+           right: 32px;
+           background: url(../images/image_sprite.png) no-repeat -265px -255px;
+         }
+       }
+
+       &-detail {
+
+         //height:0;
+         overflow: hidden;
+         transition: height .5s ease-out;
+
+
+         &-wrap {
+           background: rgba(128, 128, 128, 0.3);
+           padding: 30px 90px;
+           border-top: 1px solid #ffcd12;
+           box-sizing: border-box;
+
+           &-contents {
+             line-height: 2em;
+             font-size: 15px;
+             color: #fff;
+           }
+
+           &-heading {
+             display:inline;
+             font-size: 20px;
+             color: #fff;
+             font-weight: bold;
+           }
+
+         }
+
+
+       }
+     }
+   }
+ }
 
 .tipmain {
   max-width: 100%;
