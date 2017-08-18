@@ -58,40 +58,21 @@
         margin: 0 auto;
         cursor: pointer;
 
-        &-h{
+        &-heading{
           width: 274px;
           height: 306px;
-          position: absolute;
-          top: 0;
-          left: 0;
-
-          &:hover:before {
-            display: block;
-          }
-
-          &:before {
-            content: "";
-            display:none;
-            width: 274px;
-            height: 306px;
-            background: #000;
-            opacity: 0.6;
-            position: absolute;
-            top:0;
-            left: 0;
-          }
-        }
-        &-heading{
           font-weight: bold;
-          top: 40%;
-          width: 274px;
           position: absolute;
           text-align: center;
+          background: #000;
+          opacity: 0.6;
+          top: 0;
+          left: 0;
+          padding-top: 142px;
+          display: none;
 
-          &:hover{
-            @extend %clearfix;
-            top:40%;
-
+          &.on{
+            display: block;
           }
         }
       }
@@ -103,6 +84,10 @@
         background: url(../images/popup_bg.jpg) no-repeat;
         top:0;
         transition:right .5s ease-out;
+        display: none;
+        &.on{
+          display: block;
+        }
 
         &-story {
 

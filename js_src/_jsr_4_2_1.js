@@ -2,18 +2,13 @@
  * Created by Administrator on 2017-08-18.
  */
 
-$('.photo-list-item-mask').on('click',function(){
-  $('.item-wrap').css({
-    height :0
-  });
-  $(this).parent().next().css({
-    height : 690,
-    transition : 'height .5s ease-out'
-  });
-  $('.review').css({
-    'padding-bottom' : 690,
-    transition : 'padding-bottom .5s ease-out'
-  });
+$('.photo-list-item').on('mouseenter',function(){
+  $(this).children('.photo-list-item-mask-heading').addClass('on');
+});
+
+$('.photo-list-item').on('click',function(){
+  $(this).children('.item-wrap').addClass('on');
+
 
 });
 $('.btn-pop-close').on('click',function(){
