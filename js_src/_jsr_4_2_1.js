@@ -5,38 +5,41 @@
 
 
 $(function(){
+  function moveRight(){
 
-  $('.photo-list-item').data('open','false').on('click',function(){
-    if($(this).data('open') == 'false'){
-      $(this).next().addClass('hidden');
-      $(this).data('open','true');
-    }else{
-      $(this).next().removeClass('hidden');
-      $(this).data('open','false');
+    if(nextIndex <= -1) {
+      nextIndex = $('.view-image').length-1;
     }
 
-  });
-});
 
-//  function moveRight(){
+
+    $('.photo-list-item').eq(currentIndex).stop().animate({left : 1050}, 2000, 'easeOutBounce');
+
+
+    $('.photo-list-item').eq(nextIndex).css({left : -1050}).stop().animate({left : 0}, 2000, 'easeOutBounce');
+
+
+    currentIndex = nextIndex;
+
+    nextIndex--;
+
+  }
+
+
+
+  //$('.photo-list-item').data('open','false').on('click',function(){
+  //  if($(this).data('open') == 'false'){
+  //    $(this).next().addClass('hidden');
+  //    $(this).data('open','true');
+  //  }else{
+  //    $(this).next().removeClass('hidden');
+  //    $(this).data('open','false');
+  //  }
+  //
+  //});
+
+
 //
-//    if(nextIndex <= -1) {
-//      nextIndex = $('.view-image').length-1;
-//    }
-//
-//
-//
-//    $('.photo-list-item').eq(currentIndex).stop().animate({left : 1050}, 2000, 'easeOutBounce');
-//
-//
-//    $('.photo-list-item').eq(nextIndex).css({left : -1050}).stop().animate({left : 0}, 2000, 'easeOutBounce');
-//
-//
-//    currentIndex = nextIndex;
-//
-//    nextIndex--;
-//
-//  }
 //
 //  function autoRolling(){// 자동 롤링
 //
@@ -68,6 +71,8 @@ $(function(){
 //
 //
 //
+});
+
 //
 //
 //  // 실행부
