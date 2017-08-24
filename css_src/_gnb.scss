@@ -42,7 +42,11 @@
       transition:all .5s ease-out;
       padding:40px 11px;
 
-      &:hover{
+      //&:hover{
+      //  color:#fff;
+      //}
+
+      &.on{
         color:#fff;
       }
     }
@@ -61,12 +65,13 @@
       top:0;
       left:140px;
       position:absolute;
-      transition:width .3s ease-out;
+      //transition:width .3s ease-out;
       overflow: hidden;
 
       &.on{
         width:100px;
       }
+
     }
 
     &-item{
@@ -92,7 +97,7 @@
       display:block;
       color:#000;
 
-      &:hover{
+      &:hover, &.on{
         color:#fff;
         font-weight:bold;
       }
