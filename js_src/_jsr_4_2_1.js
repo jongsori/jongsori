@@ -3,63 +3,21 @@
  */
 
 
-//$('.photo-list-item').on('mouseenter',function(){
-//  $(this).children('.photo-list-item-mask-heading').addClass('on');
-//});
-//
-//$('.photo-list-item').on('click',function(){
-//  $(this).children('.item-wrap').addClass('on');
-//
-//
-//});
-//$('.btn-pop-close').on('click',function(){
-//  $(this).parents('.item-wrap').css({
-//    height :0,
-//    transition : 'height 1s ease-out'
-//  });
-//  $('.review').css({
-//    'padding-bottom' : 0,
-//    transition : 'padding-bottom .5s ease-out'
-//  });
-//});
-//
-//
-//
-//$(function(){
-//
-//  function init(){
-//    $('.photo').eq(0).css({left : 0});
-//    $('.photo').eq(1).css({left : 1050});
-//    $('.photo').eq(2).css({left : -1050});
-//    marginControlWrap();
-//    paging();
-//  }
-//
-//
-//
-//  var currentIndex = 0;
-//  var  nextIndex = 0;
-//  var timeId;
-//  var checkId;
-//
-//
-//  function moveLeft(){
-//
-//    if(nextIndex >= $('.photo').length){
-//      nextIndex = 0;
-//    }
-//
-//    $('.photo').eq(currentIndex).stop().animate({left:-1050}, 2000, 'easeOutBounce');
-//
-//
-//    $('.photo').eq(nextIndex).css({left:1050}).stop().animate({left:0}, 2000, 'easeOutBounce');
-//
-//    currentIndex = nextIndex;
-//
-//    nextIndex++;
-//  }
-//
-//
+
+$(function(){
+
+  $('.photo-list-item').data('open','false').on('click',function(){
+    if($(this).data('open') == 'false'){
+      $(this).next().addClass('hidden');
+      $(this).data('open','true');
+    }else{
+      $(this).next().removeClass('hidden');
+      $(this).data('open','false');
+    }
+
+  });
+});
+
 //  function moveRight(){
 //
 //    if(nextIndex <= -1) {
@@ -114,10 +72,6 @@
 //
 //  // 실행부
 //  init();
-//  autoRolling();
-//
-//
-//
 //
 //
 //  $('.arrow.right').on('click',function(){

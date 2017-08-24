@@ -102,7 +102,7 @@
         top:0;
         left:0;
         z-index:2;
-      
+
 
         &-story {
 
@@ -243,3 +243,62 @@
   pointer-events: auto;
 
 }
+
+
+
+
+
+
+
+
+
+.radio-box{
+  width: 200px;
+  height: 16px;
+  margin-left: 394px;
+  top: 970px;
+  position:absolute;
+
+  &-item{
+    float: left;
+    width: 20px;
+    height: 20px;
+
+
+    .current{
+      &:hover{
+        @extend %clearfix;
+        color: #ffcd12;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
