@@ -11,9 +11,9 @@ $(function(){
 
   });
 
-  $('.gnb-depth1-link').on('mouseleave', function(){
+  $('.gnb-depth1').on('mouseleave', function(){
 
-   $(this).next('.gnb-depth2-wrap').removeClass('on');
+   $(this).children('.gnb-depth2-wrap').removeClass('on');
 
   });
 
@@ -58,7 +58,9 @@ $(function(){
 
   }
 
-  if(depth1 == 'sub1-1'){
+
+
+  if(depth2 == 'sub1-1'){
 
     $('.gnb-depth2-link').eq(0).addClass('on');
 
@@ -80,27 +82,24 @@ $(function(){
 
   }
 
-  if(depth1 == 'sub2') {
+  if(depth2 == 'sub2') {
 
-    $('.gnb-depth2-link').eq(0).addClass('on');
+    $('.gnb-depth2-link').eq(5).addClass('on');
 
   }
 
-  if(depth1 == 'sub3'){
+  if(depth2 == 'sub3-1'){
 
-    $('.gnb-depth1-link').eq(2).addClass('on');
+    $('.gnb-depth2-link').eq(6).addClass('on');
 
+  } else if(depth2 == 'sub3-2'){
 
-  } else if(depth2 == 'sub3-1'){
+    $('.gnb-depth2-link').eq(7).addClass('on');
 
-    $('.gnb-depth2-link').eq(0).addClass('on');
-
-  } else if(depth2 == 'sub3-2') {
-
-    $('.gnb-depth2-link').eq(1).addClass('on');
   } else if(depth2 == 'sub3-3') {
 
-    $('.gnb-depth2-link').eq(2).addClass('on');
+    $('.gnb-depth2-link').eq(8).addClass('on');
+
   }
 
 
