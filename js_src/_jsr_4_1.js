@@ -60,6 +60,7 @@ $(function(){
       menuClose( $(this) );
 
 
+
     } else {
 
       menuSelfClose( $(this) );
@@ -67,6 +68,7 @@ $(function(){
     }
 
   });
+
 
 
 });
