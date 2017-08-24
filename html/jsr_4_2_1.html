@@ -51,6 +51,11 @@
 </header>
 
 
+<script>
+  // 페이지 구분용 변수
+  var depth1 = 'sub2';
+  var depth2 = 'sub2-2';
+</script>
 
 <section class="section review">
 
@@ -59,24 +64,22 @@
       <h2 class="title-kor">후기</h2>
       <h2 class="title-eng">REVIEW.</h2>
     </div>
-
     <div class="photo">
       <ul class="photo-list">
         <li class="photo-list-item">
-
-          <div class="photo-list-item-mask">
-            <img src="../images/1-1.jpg" alt="" />
-            <div class="photo-list-item-mask-h">
-              <span class="photo-list-item-mask-heading">한옥의 아름다움</span>
+          <a href="#layer01" onclick="aa(); return false;" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
+             <div class="photo-list-item-mask">
+               <p>한옥의 아름다움</p>
+              <img src="../images/1-1.jpg" alt="한옥의 아름다움"/>
+             </div>
+           </a>
+          <div class="popup-wrap" id="layer01">
+            <div class="popup-wrap-story">
+              <div class="popup-wrap-story-heading">한옥의 아름다움</div>
+              <div class="popup-wrap-story-name">작성자 : 제인리</div>
+              <div class="popup-wrap-story-date">2017.07.09</div>
             </div>
-          </div>
-            <div class="item-wrap">
-              <div class="item-story">
-                <div class="item-pop-heading">한옥의 아름다움</div>
-                  <div class="item-pop-name">작성자 : 제인리</div>
-                    <div class="item-pop-date">2017.07.09</div>
-              </div>
-              <p class="item-story-paragraph">
+              <p class="popup-wrap-story-paragraph">
                 미니멀리즘이 유행하는 요즘...
                 한국의 한옥은  옛것의  정서와 멋을 품고
                 조용하고 넉넉한  마음으로 품어주는  안식처로
@@ -85,456 +88,453 @@
                 주인 어르신이 만들어 주신 소박하지만
                 건강한 아침 식사는  속이 편해서  여행의 어려움이 없었을 정도예요.
               </p>
-              <input type="button" value="close" class="btn-pop-close" />
-            </div>
-
+            <button type="button" class="close-button" onclick="location.href='#close'">닫기</button>
+          </div>
         </li>
         <li class="photo-list-item">
-          <div class="photo-list-item-mask">
-            <img src="../images/1-2.jpg" alt="" />
-            <div class="photo-list-item-mask-h">
-             <span class="photo-list-item-mask-heading"> 얍~ 태권도~</span>
+          <a href="#layer02" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
+            <div class="photo-list-item-mask">
+              <p>얍~ 태권도~</p>
+              <img src="../images/1-2.jpg" alt="얍~ 태권도~"/>
             </div>
-          </div>
-        <!--  <div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">얍~ 태권도~</div>
-                <div class="item-pop-name">작성자 :  김기수</div>
-                <div class="item-pop-date">2017.07.05</div>
-             </div>
-                <p class="item-story-paragraph">
-                  태권도를 배웠어요.
-                  올림픽에서 태권도  시합을 봤을 때
-                  발차기 기술이 너무 멋있어서 꼭 한번 배워보고 싶었어요.
-                  예의를 중시하며  몸의 건강과 정신 수양에도
-                  도움이 된다는 것을 알게 되었고
-                  다른 나라 친구들에게도 태권도를 소개 하게 되더라구요
-                  배울 수 있는 곳이 있다면 계속 배우고 싶어요~
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>-->
+          </a>
+           <div class="popup-wrap" id="layer02">
+              <div class="popup-wrap-story">
+                <div class="popup-wrap-story-heading">얍~ 태권도~</div>
+                <div class="popup-wrap-story-name">작성자 :  김기수</div>
+                <div class="popup-wrap-story-date">2017.07.05</div>
+               </div>
+                  <p class="popup-wrap-story-paragraph">
+                    태권도를 배웠어요.
+                    올림픽에서 태권도  시합을 봤을 때
+                    발차기 기술이 너무 멋있어서 꼭 한번 배워보고 싶었어요.
+                    예의를 중시하며  몸의 건강과 정신 수양에도
+                    도움이 된다는 것을 알게 되었고
+                    다른 나라 친구들에게도 태권도를 소개 하게 되더라구요
+                    배울 수 있는 곳이 있다면 계속 배우고 싶어요~
+                  </p>
+               <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+           </div>
         </li>
         <li class="photo-list-item">
+        <a href="#layer03" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
           <div class="photo-list-item-mask">
-            <img src="../images/1-3.jpg" alt="" />
-            <div class="photo-list-item-mask-h">
-              <span class="photo-list-item-mask-heading">대형 비빔밥</span>
-            </div>
+            <p>대형 비빔밥</p>
+            <img src="../images/1-3.jpg" alt="대형 비빔밥"/>
           </div>
-<!--          <div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">대형 비빔밥</div>
-                <div class="item-pop-name">작성자 :  엘리나 </div>
-                <div class="item-pop-date">2017.07.02</div>
-             </div>
-                <p class="item-story-paragraph">
-                  종로 인사동 거리 축제에서
-                  대형 비빔밥을 나누는  행사를 참여했어요.
-                  커다란 비빔밥을  비벼서 함께 나눠 먹으니
-                  맛도 좋고 기분도 최고였어요~
-                  비빔밥 최고~
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>-->
+        </a>
+        <div class="popup-wrap" id="layer03">
+          <div class="item-wrap-story">
+              <div class="popup-wrap-story-heading">대형 비빔밥</div>
+              <div class="popup-wrap-story-name">작성자 :  엘리나 </div>
+              <div class="popup-wrap-story-date">2017.07.02</div>
+           </div>
+              <p class="popup-wrap-story-paragraph">
+                종로 인사동 거리 축제에서
+                대형 비빔밥을 나누는  행사를 참여했어요.
+                커다란 비빔밥을  비벼서 함께 나눠 먹으니
+                맛도 좋고 기분도 최고였어요~
+                비빔밥 최고~
+              </p>
+            <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+         </div>
         </li>
         <li class="photo-list-item">
+        <a href="#layer04" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
           <div class="photo-list-item-mask">
-            <img src="../images/1-4.jpg" alt="" />
-            <div class="photo-list-item-mask-h">
-              <span class="photo-list-item-mask-heading">맛있는 한식요리</span>
-            </div>
+            <p>맛있는 한식요리</p>
+            <img src="../images/1-4.jpg" alt="맛있는 한식요리"/>
           </div>
-          <!--<div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">맛있는 한식요리</div>
-                <div class="item-pop-name">작성자 :  카다리나 </div>
-                <div class="item-pop-date">2017.07.06</div>
-            </div>
-                <p class="item-story-paragraph">
-                  함께 여행 온 친구들과 종로에 위치한
-                  한식집에서 행사를 통해  한국음식 만들기 체험을
-                  하고  만든 음식을 먹어보았어요.
-                  처음에는 매운맛에 놀라고
-                  두번째는  여러가지 음식들이 조화를 이루면서
-                  단맛, 부드러운 맛, 시원한 맛 등
-                  다양한 맛이 어우러진 한식요리 매력에
-                  푹..빠졌답니다.
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>-->
+        </a>
+        <div class="popup-wrap" id="layer04">
+          <div class="item-wrap-story">
+              <div class="popup-wrap-story-heading">맛있는 한식요리</div>
+              <div class="popup-wrap-story-name">작성자 :  카다리나 </div>
+              <div class="popup-wrap-story-date">2017.07.06</div>
+          </div>
+              <p class="popup-wrap-story-paragraph">
+                함께 여행 온 친구들과 종로에 위치한
+                한식집에서 행사를 통해  한국음식 만들기 체험을
+                하고  만든 음식을 먹어보았어요.
+                처음에는 매운맛에 놀라고
+                두번째는  여러가지 음식들이 조화를 이루면서
+                단맛, 부드러운 맛, 시원한 맛 등
+                다양한 맛이 어우러진 한식요리 매력에
+                푹..빠졌답니다.
+              </p>
+            <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+        </div>
         </li>
         <li class="photo-list-item">
+        <a href="#layer05" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
           <div class="photo-list-item-mask">
-            <img src="../images/1-5.jpg" alt="" />
-            <div class="photo-list-item-mask-h">
-              <span class="photo-list-item-mask-heading">전통 악기</span>
-            </div>
+            <p>전통 악기</p>
+            <img src="../images/1-5.jpg" alt="전통 악기"/>
           </div>
-          <!--<div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">전통 악기</div>
-                <div class="item-pop-name">작성자 :  찰리정 </div>
-                <div class="item-pop-date">2017.07.02</div>
-             </div>
-                <p class="item-story-paragraph">
-                  각 나라의 전통악기들은  소리도 다르고
-                  모양도 다르지만  사람들의 마음을 움직이는 힘이 있는것 같아요.
-                  저는 첼리스트로 활동 하면서
-                  각 나라를 여행 할 때 마다
-                  전통 악기를 만들어 보곤 하는데...
-                  종로에서 한국의 피리인  단소를 만들어 보고
-                  소리내어 연주도 해 보았어요.
-                  맑고 청아한 단소 소리에 감동 받아서
-                  후기에 남깁니다.
-                  알려주신  선생님께도 감사드립니다.
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>-->
+        </a>
+        <div class="popup-wrap" id="layer05">
+          <div class="item-wrap-story">
+              <div class="popup-wrap-story-heading">전통 악기</div>
+              <div class="popup-wrap-story-name">작성자 :  찰리정 </div>
+              <div class="popup-wrap-story-date">2017.07.02</div>
+           </div>
+              <p class="popup-wrap-story-paragraph">
+                각 나라의 전통악기들은  소리도 다르고
+                모양도 다르지만  사람들의 마음을 움직이는 힘이 있는것 같아요.
+                저는 첼리스트로 활동 하면서
+                각 나라를 여행 할 때 마다
+                전통 악기를 만들어 보곤 하는데...
+                종로에서 한국의 피리인  단소를 만들어 보고
+                소리내어 연주도 해 보았어요.
+                맑고 청아한 단소 소리에 감동 받아서
+                후기에 남깁니다.
+                알려주신  선생님께도 감사드립니다.
+              </p>
+              <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+          </div>
         </li>
         <li class="photo-list-item">
+        <a href="#layer06" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
           <div class="photo-list-item-mask">
-            <img src="../images/1-6.jpg" alt="" />
-            <div class="photo-list-item-mask-h">
-              <span class="photo-list-item-mask-heading">경복궁은 정말 아름다워요~</span>
-            </div>
+            <p>아름다운 경복궁</p>
+            <img src="../images/1-6.jpg" alt="아름다운 경복궁"/>
           </div>
-          <!--<div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">경복궁은 정말 아름다워요~</div>
-                <div class="item-pop-name">작성자 :  홍길동</div>
-                <div class="item-pop-date">2017.07.07</div>
+        </a>
+        <div class="popup-wrap" id="layer06">
+          <div class="item-wrap-story">
+                <div class="popup-wrap-story-heading">아름다운 경복궁</div>
+                <div class="popup-wrap-story-name">작성자 :  홍길동</div>
+                <div class="popup-wrap-story-date">2017.07.07</div>
             </div>
-                <p class="item-story-paragraph">
+                <p class="popup-wrap-story-paragraph">
                   다른 나라 친구들이 한국에 가면 꼭 경복궁을 다녀 오라고 하더라구요
                   한국의  건축물은  주변 자연 경관과 어우러져 하나의 작품이라고 .....
                   가이드의 설명을 들으며  대여한 한복까지 입고
                   사진을 찍어보니 공주가 된 느낌이였어요
                   여러분들도 경복궁에 꼭! 가보세요~
                 </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-          </div>-->
+           <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+         </div>
         </li>
       </ul>
 
       <!--<ul class="photo-list2">
+          <li class="photo-list-item">
+            <a href="#layer07" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
+              <div class="photo-list-item-mask">
+                <p>도자기 공방에서</p>
+                <img src="../images/2-1.jpg" alt="도자기 공방에서"/>
+              </div>
+            </a>
+            <div class="popup-wrap" id="layer07">
+              <div class="item-wrap-story">
+                  <div class="popup-wrap-story-heading">도자기 공방에서</div>
+                  <div class="popup-wrap-story-name">작성자 :  랜디 오웰</div>
+                  <div class="popup-wrap-story-date">2017.07.10</div>
+              </div>
+                  <p class="popup-wrap-story-paragraph">
+                    한국 도자기는 곱고 선이 아름다워서
+                    부모님께 선물해 드렸을 때 너무 좋아하셨어요.
+                    작년에 이어 올해도 한국으로 휴가를 왔는데
+                    직접 도자기를 만들어 보고 싶어서
+                    공방을 찾아서 이렇게 친구들과 만들어 보았습니다.
+                    이니셜도 새겨 넣고
+                    미국으로  돌아가서 잘 쓰겠습니다.
+                  </p>
+                <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+              </div>
+          </li>
+          <li class="photo-list-item">
         <li class="photo-list-item">
+          <a href="#layer08" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
             <div class="photo-list-item-mask">
-              <img src="../images/2-1.jpg" alt="" />
-               <div class="photo-list-item-mask-h">
-               <span class="photo-list-item-mask-heading">도자기 공방에서</span>
-               </div>
+              <p>등 축제</p>
+              <img src="../images/2-2.jpg" alt="등 축제"/>
             </div>
-          <div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">도자기 공방에서</div>
-                <div class="item-pop-name">작성자 :  랜디 오웰</div>
-                <div class="item-pop-date">2017.07.10</div>
-            </div>
-                <p class="item-story-paragraph">
-                  한국 도자기는 곱고 선이 아름다워서
-                  부모님께 선물해 드렸을 때 너무 좋아하셨어요.
-                  작년에 이어 올해도 한국으로 휴가를 왔는데
-                  직접 도자기를 만들어 보고 싶어서
-                  공방을 찾아서 이렇게 친구들과 만들어 보았습니다.
-                  이니셜도 새겨 넣고
-                  미국으로  돌아가서 잘 쓰겠습니다.
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>
-        </li>
-        <li class="photo-list-item">
-            <div class="photo-list-item-mask">
-              <img src="../images/2-2.jpg" alt="" />
-               <div class="photo-list-item-mask-h">
-               <span class="photo-list-item-mask-heading">등 축제</span>
-               </div>
-            </div>
-          <div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">등 축제</div>
-                <div class="item-pop-name">작성자 :  데니 험스</div>
-                <div class="item-pop-date">2017.07.11</div>
-            </div>
-                <p class="item-story-paragraph">
-                  청계천에는 낮에는 시원하고 발도 담구며 쉴 수 있고
-                  밤에는 화려한 조명과  길거리 공연으로
-                  다른 분위기를 연출하는 아주 멋진 곳이랍니다.
-                  등 축제 기간에  한국 여행을 하게 되어
-                  황홀한 추억까지  만들고 갑니다.
-                  다양한 모양의 등과 스토리가 있어 주인공과 배경 등의
-                  한편의 소설을 살아 움직이게  하는 등으로 만들어
-                  정말 환상적인 쇼를 보여줬어요.
-                  행복한 한국 여행이였습니다.
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>
-        </li>
-        <li class="photo-list-item">
-          <div class="photo-list-item-mask">
-            <img src="../images/2-3.jpg" alt="" />
-            <div class="photo-list-item-mask-h">
-            <span class="photo-list-item-mask-heading">스님과 사찰 요리</span>
-            </div>
-          </div>
-             <div class="item-wrap">
-                <div class="item-story">
-                  <div class="item-pop-heading">스님과 사찰 요리</div>
-                  <div class="item-pop-name">작성자 :  올리버 </div>
-                  <div class="item-pop-date">2017.07.12</div>
+          </a>
+          <div class="popup-wrap" id="layer08">
+            <div class="item-wrap-story">
+                  <div class="popup-wrap-story-heading">등 축제</div>
+                  <div class="popup-wrap-story-name">작성자 :  데니 험스</div>
+                  <div class="popup-wrap-story-date">2017.07.11</div>
+              </div>
+                  <p class="popup-wrap-story-paragraph">
+                    청계천에는 낮에는 시원하고 발도 담구며 쉴 수 있고
+                    밤에는 화려한 조명과  길거리 공연으로
+                    다른 분위기를 연출하는 아주 멋진 곳이랍니다.
+                    등 축제 기간에  한국 여행을 하게 되어
+                    황홀한 추억까지  만들고 갑니다.
+                    다양한 모양의 등과 스토리가 있어 주인공과 배경 등의
+                    한편의 소설을 살아 움직이게  하는 등으로 만들어
+                    정말 환상적인 쇼를 보여줬어요.
+                    행복한 한국 여행이였습니다.
+                  </p>
+                <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+              </div>
+          </li>
+          <li class="photo-list-item">
+            <a href="#layer09" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
+              <div class="photo-list-item-mask">
+                <p>스님과 사찰 요리</p>
+                <img src="../images/2-3.jpg" alt="스님과 사찰 요리"/>
+              </div>
+            </a>
+            <div class="popup-wrap" id="layer09">
+              <div class="item-wrap-story">
+                    <div class="popup-wrap-story-heading">스님과 사찰 요리</div>
+                    <div class="popup-wrap-story-name">작성자 :  올리버 </div>
+                    <div class="popup-wrap-story-date">2017.07.12</div>
+                  </div>
+                  <p class="popup-wrap-story-paragraph">
+                    한국 음식은 맵고 중독성이 강해서
+                    나 처럼 한국 처음 온 사람들이  무엇을 먹을 지 고민하겠더라구요.
+                    가이드에게 맵지 않고 건강에 좋은 음식을 추천해 달라고 했더니
+                    절에서 사찰음식을 먹어보자고 하더라고요
+                    신선한 나물과 향신료를 많이 쓰지 않아서
+                    담백하고  게다가 맵지 않고 맛있어서
+                    좋았어요. 그래서 기회가 되면 사찰음식을 배워 보고 싶다고 했더니
+                    스님께서 알려주시겠다고 해서
+                    맛있는 식사 후 음식까지 배우고 왔습니다.
+                    건강한 사찰 음식 짱!
+                  </p>
+               <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+              </div>
+          </li>
+          <li class="photo-list-item">
+            <a href="#layer10" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
+              <div class="photo-list-item-mask">
+                <p>활 만들기</p>
+                <img src="../images/2-4.jpg" alt="활 만들기"/>
+              </div>
+            </a>
+            <div class="popup-wrap" id="layer10">
+              <div class="item-wrap-story">
+                  <div class="popup-wrap-story-heading">활 만들기</div>
+                  <div class="popup-wrap-story-name">작성자 :  보챌리</div>
+                  <div class="popup-wrap-story-date">2017.07.13</div>
+              </div>
+                  <p class="popup-wrap-story-paragraph">
+                    대한민국의  오래된 전통방식의 전쟁 무기인 활에 대해 배웠어요.
+                    옛날 사람들은 더 똑똑 했나봐요.
+                    지금처럼 기계가  발달하지 않았는데도
+                    어런 것을 만들었다니...정말 놀라웠어요.
+                    대나무로 만든 활은 튼튼하고 반 영구적이라
+                    가보로 물려주고 싶어요.
+                  </p>
+                  <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
                 </div>
-                <p class="item-story-paragraph">
-                  한국 음식은 맵고 중독성이 강해서
-                  나 처럼 한국 처음 온 사람들이  무엇을 먹을 지 고민하겠더라구요.
-                  가이드에게 맵지 않고 건강에 좋은 음식을 추천해 달라고 했더니
-                  절에서 사찰음식을 먹어보자고 하더라고요
-                  신선한 나물과 향신료를 많이 쓰지 않아서
-                  담백하고  게다가 맵지 않고 맛있어서
-                  좋았어요. 그래서 기회가 되면 사찰음식을 배워 보고 싶다고 했더니
-                  스님께서 알려주시겠다고 해서
-                  맛있는 식사 후 음식까지 배우고 왔습니다.
-                  건강한 사찰 음식 짱!
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>
-        </li>
-        <li class="photo-list-item">
-            <div class="photo-list-item-mask">
-              <img src="../images/2-4.jpg" alt="" />
-               <div class="photo-list-item-mask-h">
-               <span class="photo-list-item-mask-heading">활 만들기</span>
-               </div>
-            </div>
-          <div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">활 만들기</div>
-                <div class="item-pop-name">작성자 :  보챌리</div>
-                <div class="item-pop-date">2017.07.13</div>
-            </div>
-                <p class="item-story-paragraph">
-                  대한민국의  오래된 전통방식의 전쟁 무기인 활에 대해 배웠어요.
-                  옛날 사람들은 더 똑똑 했나봐요.
-                  지금처럼 기계가  발달하지 않았는데도
-                  어런 것을 만들었다니...정말 놀라웠어요.
-                  대나무로 만든 활은 튼튼하고 반 영구적이라
-                  가보로 물려주고 싶어요.
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
+          </li>
+          <li class="photo-list-item">
+            <a href="#layer11" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
+              <div class="photo-list-item-mask">
+                <p>탈 만들기</p>
+                <img src="../images/2-5.jpg" alt="탈 만들기"/>
               </div>
-        </li>
-        <li class="photo-list-item">
-            <div class="photo-list-item-mask">
-              <img src="../images/2-5.jpg" alt="" />
-               <div class="photo-list-item-mask-h">
-               <span class="photo-list-item-mask-heading">탈 만들기</span>
-               </div>
-            </div>
-          <div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">탈 만들기</div>
-                <div class="item-pop-name">작성자 :  숀 리키?</div>
-                <div class="item-pop-date">2017.07.14</div>
-            </div>
-                <p class="item-story-paragraph">
-                  탈 만들기 체험을 하고 왔어요.
-                  악귀를 물리치는 탈, 행복을 가져다 주는 탈
-                  건강을 기원하는 탈 등등
-                  표정과 색채로 많은 것을 표현하고
-                  의미를 담은 예술 작품인 탈을 만들고
-                  써보기도 하고 유쾌한 시간이였어요.
-                  저는 집에 전시해 두려고요~
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>
-        </li>
-        <li class="photo-list-item">
-            <div class="photo-list-item-mask">
-              <img src="../images/2-6.jpg" alt="" />
-              <div class="photo-list-item-mask-h">
-              <span class="photo-list-item-mask-heading">떡 박물관에서</span>
+            </a>
+            <div class="popup-wrap" id="layer11">
+              <div class="item-wrap-story">
+                  <div class="popup-wrap-story-heading">탈 만들기</div>
+                  <div class="popup-wrap-story-name">작성자 :  숀 리키?</div>
+                  <div class="popup-wrap-story-date">2017.07.14</div>
               </div>
-            </div>
-          <div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">떡 박물관에서</div>
-                <div class="item-pop-name">작성자 : 헨리 퀸스</div>
-                <div class="item-pop-date">2017.070.15</div>
-            </div>
-                <p class="item-story-paragraph">
-                  떡 박물관에 다녀왔어요.
-                  외국에는 빵이 다양하듯
-                  한국에는 떡의 좋류도 많고 모양도 재료도
-                  너무 다양하고  게다가 맛도 좋터라구요
-                  꽃모양 떡 케이크를  맛 보았는데
-                  근사하고 좋았어요.
-                  그래서 박물관 안에 떡 만들기 체험 프로그램을 신청해서
-                  배우고 만들어  보았어요
-                  선생님도 참 아름다우시죠~~
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>
-        </li>
+                  <p class="popup-wrap-story-paragraph">
+                    탈 만들기 체험을 하고 왔어요.
+                    악귀를 물리치는 탈, 행복을 가져다 주는 탈
+                    건강을 기원하는 탈 등등
+                    표정과 색채로 많은 것을 표현하고
+                    의미를 담은 예술 작품인 탈을 만들고
+                    써보기도 하고 유쾌한 시간이였어요.
+                    저는 집에 전시해 두려고요~
+                  </p>
+                  <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+              </div>
+          </li>
+          <li class="photo-list-item">
+            <a href="#layer12" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
+              <div class="photo-list-item-mask">
+                <p>떡 박물관에서</p>
+                <img src="../images/2-6.jpg" alt="떡 박물관에서"/>
+              </div>
+            </a>
+            <div class="popup-wrap" id="layer12">
+              <div class="item-wrap-story">
+                  <div class="popup-wrap-story-heading">떡 박물관에서</div>
+                  <div class="popup-wrap-story-name">작성자 : 헨리 퀸스</div>
+                  <div class="popup-wrap-story-date">2017.070.15</div>
+              </div>
+                  <p class="popup-wrap-story-paragraph">
+                    떡 박물관에 다녀왔어요.
+                    외국에는 빵이 다양하듯
+                    한국에는 떡의 좋류도 많고 모양도 재료도
+                    너무 다양하고  게다가 맛도 좋터라구요
+                    꽃모양 떡 케이크를  맛 보았는데
+                    근사하고 좋았어요.
+                    그래서 박물관 안에 떡 만들기 체험 프로그램을 신청해서
+                    배우고 만들어  보았어요
+                    선생님도 참 아름다우시죠~~
+                  </p>
+                  <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+              </div>
+          </li>
       </ul>
+
       <ul class="photo-list3">
-        <li class="photo-list-item">
-            <div class="photo-list-item-mask">
-              <img src="../images/3-1.jpg" alt="" />
-              <div class="photo-list-item-mask-h">
-              <span class="photo-list-item-mask-heading">한국의 제사에 대해</span>
+          <li class="photo-list-item">
+            <a href="#layer13" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
+              <div class="photo-list-item-mask">
+                <p>한국의 제사에 대해</p>
+                <img src="../images/3-1.jpg" alt="한국의 제사에 대해"/>
               </div>
-            </div>
-          <div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">한국의 제사에 대해</div>
-                <div class="item-pop-name">작성자 :  잭슨</div>
-                <div class="item-pop-date">2017.07.16</div>
-            </div>
-                <p class="item-story-paragraph">
-                  한국에는 제사를 중요시 한다고 들었어요.
-                  어떤 의식이든 각 나라의 전통을 이어 가며 행해지는 법도는
-                  뜻 깊고  숙연해지는 것 같아요.
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>
-        </li>
-        <li class="photo-list-item">
-            <div class="photo-list-item-mask">
-              <img src="../images/3-2.jpg" alt="" />
-              <div class="photo-list-item-mask-h">
-              <span class="photo-list-item-mask-heading">전통 행진</span>
+            </a>
+            <div class="popup-wrap" id="layer13">
+              <div class="item-wrap-story">
+                  <div class="popup-wrap-story-heading">한국의 제사에 대해</div>
+                  <div class="popup-wrap-story-name">작성자 :  잭슨</div>
+                  <div class="popup-wrap-story-date">2017.07.16</div>
               </div>
-            </div>
-          <div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">전통 행진</div>
-                <div class="item-pop-name">작성자 :  에이든</div>
-                <div class="item-pop-date">2017.07.12</div>
-            </div>
-                <p class="item-story-paragraph">
-                  가이드가 시간 맞춰  움직여야 볼 수 있는 행사가 있다고 해서
-                  서두르며 운직였어요.
-                  옛날 한국인 조선시대에  행진이라고 하더군요.
-                  곱게 차려 입은 한복도 인상적이고
-                  악기소리 와 진지한 표정으로  행진 하는 모습이
-                  다른 나라들의 축제와는  다르게  진중하고 오랜 전통이 느껴졌어요.
-                  왕의 행차도 더 웅장하고  멋지다고  가이드가 말해 줬는데...
-                  못봐서 아쉬워요.
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>
-        </li>
-        <li class="photo-list-item">
-            <div class="photo-list-item-mask">
-              <img src="../images/3-3.jpg" alt="" />
-               <div class="photo-list-item-mask-h">
-               <span class="photo-list-item-mask-heading">서예 시간</span>
-               </div>
-            </div>
-          <div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">서예 시간</div>
-                <div class="item-pop-name">작성자 : 오정숙</div>
-                <div class="item-pop-date">2017.07.18</div>
-            </div>
-                <p class="item-story-paragraph">
-                  한국의 전통 종이인 한지에다가....
-                  먹이라는  검정색 벽돌을 물에 갈아서
-                  글을 쓰는 서예를 배웠어요.
-                  예전에는 어렇게 글을 기록하고 남겼다고 해요.
-                  친구들과 서로 이름도 써보고
-                  한글도 조금 배워보는 즐거운 시간이었어요
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>
-        </li>
-        <li class="photo-list-item">
-            <div class="photo-list-item-mask">
-              <img src="../images/3-4.jpg" alt="" />
-              <div class="photo-list-item-mask-h">
-              <span class="photo-list-item-mask-heading">전통 술</span>
+                  <p class="popup-wrap-story-paragraph">
+                    한국에는 제사를 중요시 한다고 들었어요.
+                    어떤 의식이든 각 나라의 전통을 이어 가며 행해지는 법도는
+                    뜻 깊고  숙연해지는 것 같아요.
+                  </p>
+                  <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
               </div>
-            </div>
-          <div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">전통 술</div>
-                <div class="item-pop-name">작성자 :  캐리  </div>
-                <div class="item-pop-date">2017.07.20</div>
-            </div>
-                <p class="item-story-paragraph">
-                  한국에는 전통술이 지역마다 다양하다고 들었어요
-                  한복을 입고 전통 술을 만들어 보았는데
-                  막걸리라고 한국의 주식인 쌀로 만든 막걸리는
-                  달콤하면서도 부드러워서 맛이 아주 좋았어요
-                  한국 음식인 보쌈과 같이 먹어보라는
-                  한국 친구의 말에 저녁에는 내가 만든 막걸리와
-                  보쌈을 먹어보려고요.
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
+          </li>
+          <li class="photo-list-item">
+            <a href="#layer14" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
+              <div class="photo-list-item-mask">
+                <p>전통 행진</p>
+                <img src="../images/3-2.jpg" alt="전통 행진"/>
               </div>
-        </li>
-        <li class="photo-list-item">
-            <div class="photo-list-item-mask">
-              <img src="../images/3-5.jpg" alt="" />
-                <div class="photo-list-item-mask-h">
-                <span class="photo-list-item-mask-heading">인사동 공방</span>
+            </a>
+            <div class="popup-wrap" id="layer14">
+              <div class="item-wrap-story">
+                  <div class="popup-wrap-story-heading">전통 행진</div>
+                  <div class="popup-wrap-story-name">작성자 :  에이든</div>
+                  <div class="popup-wrap-story-date">2017.07.12</div>
+              </div>
+                  <p class="popup-wrap-story-paragraph">
+                    가이드가 시간 맞춰  움직여야 볼 수 있는 행사가 있다고 해서
+                    서두르며 운직였어요.
+                    옛날 한국인 조선시대에  행진이라고 하더군요.
+                    곱게 차려 입은 한복도 인상적이고
+                    악기소리 와 진지한 표정으로  행진 하는 모습이
+                    다른 나라들의 축제와는  다르게  진중하고 오랜 전통이 느껴졌어요.
+                    왕의 행차도 더 웅장하고  멋지다고  가이드가 말해 줬는데...
+                    못봐서 아쉬워요.
+                  </p>
+                  <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+              </div>
+          </li>
+          <li class="photo-list-item">
+            <a href="#layer15" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
+              <div class="photo-list-item-mask">
+                <p>서예 시간</p>
+                <img src="../images/3-3.jpg" alt="서예 시간"/>
+              </div>
+            </a>
+            <div class="popup-wrap" id="layer15">
+              <div class="item-wrap-story">
+                  <div class="popup-wrap-story-heading">서예 시간</div>
+                  <div class="popup-wrap-story-name">작성자 : 오정숙</div>
+                  <div class="popup-wrap-story-date">2017.07.18</div>
+              </div>
+                  <p class="popup-wrap-story-paragraph">
+                    한국의 전통 종이인 한지에다가....
+                    먹이라는  검정색 벽돌을 물에 갈아서
+                    글을 쓰는 서예를 배웠어요.
+                    예전에는 어렇게 글을 기록하고 남겼다고 해요.
+                    친구들과 서로 이름도 써보고
+                    한글도 조금 배워보는 즐거운 시간이었어요
+                  </p>
+                  <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+              </div>
+          </li>
+          <li class="photo-list-item">
+            <a href="#layer16" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
+              <div class="photo-list-item-mask">
+                <p>전통 술</p>
+                <img src="../images/3-4.jpg" alt="전통 술"/>
+              </div>
+            </a>
+            <div class="popup-wrap" id="layer16">
+              <div class="item-wrap-story">
+                  <div class="popup-wrap-story-heading">전통 술</div>
+                  <div class="popup-wrap-story-name">작성자 :  캐리  </div>
+                  <div class="popup-wrap-story-date">2017.07.20</div>
+              </div>
+                  <p class="popup-wrap-story-paragraph">
+                    한국에는 전통술이 지역마다 다양하다고 들었어요
+                    한복을 입고 전통 술을 만들어 보았는데
+                    막걸리라고 한국의 주식인 쌀로 만든 막걸리는
+                    달콤하면서도 부드러워서 맛이 아주 좋았어요
+                    한국 음식인 보쌈과 같이 먹어보라는
+                    한국 친구의 말에 저녁에는 내가 만든 막걸리와
+                    보쌈을 먹어보려고요.
+                  </p>
+                  <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
                 </div>
-            </div>
-          <div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">인사동 공방</div>
-                <div class="item-pop-name">작성자 :  김정근</div>
-                <div class="item-pop-date">2017.07.19</div>
-            </div>
-                <p class="item-story-paragraph">
-                  인사동에서 유명한 수제 공방집에
-                  친구와 찾아갔어요
-                  부모님께 선물을 드리고 싶어서요
-                  선생님께 설명을 들으면서
-                  내 손으로 직접 만들어 보니 더 이쁘고
-                  세상에 하나뿐인 선물을 드릴 수  있게 됐어요.
-                  너무 아름답죠?
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>
-        </li>
-        <li class="photo-list-item">
-            <div class="photo-list-item-mask">
-              <img src="../images/3-6.jpg" alt="" />
-               <div class="photo-list-item-mask-h">
-               <span class="photo-list-item-mask-heading">전통 혼례했어요<?span>
-               </div>
-            </div>
-          <div class="item-wrap">
-            <div class="item-story">
-                <div class="item-pop-heading">전통 혼례했어요</div>
-                <div class="item-pop-name">작성자 :  크루즈 일리 </div>
-                <div class="item-pop-date">2017.07.21</div>
-            </div>
-                <p class="item-story-paragraph">
-                  결혼식을 한국의 전통 방식으로 경복궁에서 했어요.
-                  여자 친구랑  한국에 여행 와서
-                  프로포즈를 하고  기념으로 우리끼리  결혼식을 올리자고 했는데
-                  경복궁에서  전통 혼례 체험을 할 수 있다고 해서
-                  바로 식을 올렸습니다.
-                  우리가 한복을 입고 결혼식을 하니
-                  모든 분들이 아름답닫고 말씀해 주시고
-                  행복한 순간이였어요.
-                  감사합니다.~~~
-                </p>
-                <input type="button" value="close" class="btn-pop-close js-item-story-close" />
-            </div>
-        </li>
+          </li>
+          <li class="photo-list-item">
+            <a href="#layer17" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
+              <div class="photo-list-item-mask">
+                <p>인사동 공방</p>
+                <img src="../images/3-5.jpg" alt="인사동 공방"/>
+              </div>
+            </a>
+            <div class="popup-wrap" id="layer17">
+              <div class="item-wrap-story">
+                  <div class="popup-wrap-story-heading">인사동 공방</div>
+                  <div class="popup-wrap-story-name">작성자 :  김정근</div>
+                  <div class="popup-wrap-story-date">2017.07.19</div>
+              </div>
+                  <p class="popup-wrap-story-paragraph">
+                    인사동에서 유명한 수제 공방집에
+                    친구와 찾아갔어요
+                    부모님께 선물을 드리고 싶어서요
+                    선생님께 설명을 들으면서
+                    내 손으로 직접 만들어 보니 더 이쁘고
+                    세상에 하나뿐인 선물을 드릴 수  있게 됐어요.
+                    너무 아름답죠?
+                  </p>
+                  <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+              </div>
+          </li>
+          <li class="photo-list-item">
+            <a href="#layer18" title="클릭하면 해당 내용의 창이 열림" class="photo-list-item-link">
+              <div class="photo-list-item-mask">
+                <p>전통 혼례했어요</p>
+                <img src="../images/3-6.jpg" alt="전통 혼례했어요"/>
+              </div>
+            </a>
+            <div class="popup-wrap" id="layer18">
+              <div class="item-wrap-story">
+                  <div class="popup-wrap-story-heading">전통 혼례했어요</div>
+                  <div class="popup-wrap-story-name">작성자 :  크루즈 일리 </div>
+                  <div class="popup-wrap-story-date">2017.07.21</div>
+              </div>
+                  <p class="popup-wrap-story-paragraph">
+                    결혼식을 한국의 전통 방식으로 경복궁에서 했어요.
+                    여자 친구랑  한국에 여행 와서
+                    프로포즈를 하고  기념으로 우리끼리  결혼식을 올리자고 했는데
+                    경복궁에서  전통 혼례 체험을 할 수 있다고 해서
+                    바로 식을 올렸습니다.
+                    우리가 한복을 입고 결혼식을 하니
+                    모든 분들이 아름답닫고 말씀해 주시고
+                    행복한 순간이였어요.
+                    감사합니다.~~~
+                  </p>
+                  <button type="button" class="close-button" onClick="location.href='#close'">닫기</button>
+              </div>
+          </li>
       </ul>-->
 
-      <div class="photo-list-button-right">right</div>
-      <div class="photo-list-button-left">left</div>
-
-
-
-
+      <div class="photo-list-button-right hidden">right</div>
+      <div class="photo-list-button-left hidden">left</div>
 
     </div>
 
-  <ul class="radio-box">
+  <ul class="radio-box hidden">
     <li class="radio-box-item"><a href = "#list" class="current">●</a></li>
     <li class="radio-box-item"><a href = "#list1" class="current">●</a></li>
     <li class="radio-box-item"><a href = "#list2" class="current">●</a></li>
