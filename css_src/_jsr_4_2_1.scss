@@ -8,15 +8,13 @@
   background: url(../images/review-bg.jpg) no-repeat fixed;
   }
 
-
-.inner-box{
-
-}
-
 .photo {
   width: 1050px;
 
   &-list {
+    content: "";
+    display: block;
+    clear: both;
 
     position: relative;
 
@@ -42,73 +40,71 @@
       cursor: pointer;
     }
 
-    &-item {
+
+    &-item{
       overflow: hidden;
       width: 274px;
       height: 306px;
       float: left;
       margin-right: 14px;
-      padding-bottom: 78px;
+      padding-bottom:68px;
 
-      &-mask {
+      &-link{
+        position: absolute;
+        width: 276px;
+        text-align: center;
+
+      }
+
+      &-mask{
         width: 274px;
         height: 306px;
+        position: absolute;
+        left: 0;
         overflow: hidden;
-        position: relative;
-        margin: 0 auto;
-        cursor: pointer;
 
-        &-h{
+        &:hover:before{
+          display: block;
+        }
+        &:hover > p{
+          display:block;
+        }
+        &:before{
+          content: "";
+          display:none;
           width: 274px;
-          height: 306px;
+          height: 100%;
           position: absolute;
-          top: 0;
+          background: #000;
+          opacity: 0.6;
           left: 0;
 
-          &:hover:before {
-            display: block;
-          }
-
-          &:before {
-            content: "";
-            display:none;
-            width: 274px;
-            height: 306px;
-            background: #000;
-            opacity: 0.6;
-            position: absolute;
-            top:0;
-            left: 0;
-          }
         }
-        &-heading{
-          font-weight: bold;
-          top: 40%;
-          width: 274px;
-          position: absolute;
-          text-align: center;
-
-          &:hover{
-            @extend %clearfix;
-            top:40%;
-
-          }
+        &> p{
+          position:absolute;
+          top:50%;
+          left:50%;
+          transform: translate( -50%, -50%);
+          display: none;
         }
       }
 
-      .item-wrap {
+      .popup-wrap {
+        opacity:0;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        pointer-events: none;
         width: 850px;
         height: 690px;
-        position: absolute;
+        position:absolute;
         background: url(../images/popup_bg.jpg) no-repeat;
         top:0;
-        transition:right .5s ease-out;
+        left:0;
+        z-index:2;
+      
 
         &-story {
-
-          &:after {
-            @extend %clearfix;
-          }
 
           &-heading {
             font-size: 20px;
@@ -116,7 +112,6 @@
             margin: 30px 0 10px 30px;
             float: left;
           }
-
           &-name {
             font-size: 20px;
             font-weight: 700;
@@ -130,26 +125,26 @@
             margin: 32px 20px 0 0;
           }
           &-paragraph {
-          width: 580px;
-          height: 600px;
-          float: left;
-          color: #000;
-          margin-left: 100px;
-          line-height: 3;
-          padding-top: 86px;
+            width: 580px;
+            height: 600px;
+            float: left;
+            color: #000;
+            margin-left: 100px;
+            line-height: 3;
+            padding-top: 86px;
           }
 
-      }
+        }
 
-        .btn-pop-close{
+        .close-button{
           width: 35px;
           height: 36px;
-          top: -66px;
-          right: -41px;
+          top: -70px;
+          right: -50px;
           position: absolute;
-          background: url(../images/image_sprite.png) no-repeat -227px -255px;
-          text-indent: -9999em;
+          text-indent: -999999999em;
           border: 0;
+          background: url(../images/image_sprite.png)no-repeat -228px -255px;
           cursor: pointer;
 
         }
@@ -158,35 +153,93 @@
   }
 }
 
-
-
-.radio-box{
-  width: 200px;
-  height: 16px;
-  margin-left: 394px;
-  top: 970px;
-  position:absolute;
-
-  &-item{
-    float: left;
-    width: 20px;
-    height: 20px;
-
-
-    .current{
-      &:hover{
-        @extend %clearfix;
-        color: #ffcd12;
-      }
-    }
-  }
+#layer01:target {
+  opacity:1;
+  pointer-events: auto;
 
 }
+#layer02:target {
+  opacity:1;
+  pointer-events: auto;
 
+}
+#layer03:target {
+  opacity:1;
+  pointer-events: auto;
 
+}
+#layer04:target {
+  opacity:1;
+  pointer-events: auto;
 
+}
+#layer05:target {
+  opacity:1;
+  pointer-events: auto;
 
+}
+#layer06:target {
+  opacity:1;
+  pointer-events: auto;
 
+}
+#layer07:target {
+  opacity:1;
+  pointer-events: auto;
 
+}
+#layer08:target {
+  opacity:1;
+  pointer-events: auto;
 
+}
+#layer09:target {
+  opacity:1;
+  pointer-events: auto;
 
+}
+#layer10:target {
+  opacity:1;
+  pointer-events: auto;
+
+}
+#layer11:target {
+  opacity:1;
+  pointer-events: auto;
+
+}
+#layer12:target {
+  opacity:1;
+  pointer-events: auto;
+
+}
+#layer13:target {
+  opacity:1;
+  pointer-events: auto;
+
+}
+#layer14:target {
+  opacity:1;
+  pointer-events: auto;
+
+}
+#layer15:target {
+  opacity:1;
+  pointer-events: auto;
+
+}
+#layer16:target {
+  opacity:1;
+  pointer-events: auto;
+
+}
+#layer17:target {
+  opacity:1;
+  pointer-events: auto;
+
+}
+#layer18:target {
+  opacity:1;
+  pointer-events: auto;
+
+}
