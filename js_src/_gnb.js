@@ -32,4 +32,9 @@ $(function(){
 
   });
 
+  $(function(){
+    var sub = $(this).addClass('on', function(){
+    });
+  });
+
 });
