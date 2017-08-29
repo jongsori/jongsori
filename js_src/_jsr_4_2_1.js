@@ -3,124 +3,94 @@
  */
 
 
-
 $(function(){
-  function moveRight(){
+  //선언부
 
-    if(nextIndex <= -1) {
-      nextIndex = $('.view-image').length-1;
+  $('.photo-list-item-link').on('click', function(){
+      $(this).next('.popup-wrap').stop().fadeIn(300);
+    });
+
+
+  $('.close-button').on('click',function(){
+    $(this).parent('.popup-wrap').stop().fadeOut(300);
+  });
+
+
+
+
+  function init(){
+    $('.photo-list').eq(0).css({left : 0});
+    $('.photo-list').eq(1).css({left : 850});
+    $('.photo-list').eq(2).css({left : -850});
+
+    //marginControlWrap();
+    //paging();
+  }
+
+  var currentIndex = 0;
+  var nextIndex = 0;
+
+  function moveLeft(){
+    if(nextIndex >= $('.photo-list').length){
+      nextIndex = 0;
     }
 
-
-
-    $('.photo-list-item').eq(currentIndex).stop().animate({left : 1050}, 2000, 'easeOutBounce');
-
-
-    $('.photo-list-item').eq(nextIndex).css({left : -1050}).stop().animate({left : 0}, 2000, 'easeOutBounce');
-
+    $('.photo-list').eq(currentIndex).stop().animate({left:-850}, 2000, 'easeOutExpo');
+    $('.photo-list').eq(nextIndex).css({left:850}).stop().animate({left:0}, 2000, 'easeOutExpo');
 
     currentIndex = nextIndex;
 
-    nextIndex--;
+    nextIndex++;
 
+    console.log( currentIndex );
+  }
+
+  function moveRight(){
+
+    if(nextIndex <= -1) {
+      nextIndex = $('.photo-list').length-1;
+    }
+
+    $('.photo-list').eq(currentIndex).stop().animate({left : 850}, 2000, 'easeOutExpo');
+    $('.photo-list').eq(nextIndex).css({left : -850}).stop().animate({left : 0}, 2000, 'easeOutExpo');
+
+    currentIndex = nextIndex;
+    nextIndex--;
   }
 
 
 
-  //$('.photo-list-item').data('open','false').on('click',function(){
-  //  if($(this).data('open') == 'false'){
-  //    $(this).next().addClass('hidden');
-  //    $(this).data('open','true');
-  //  }else{
-  //    $(this).next().removeClass('hidden');
-  //    $(this).data('open','false');
-  //  }
-  //
-  //});
+  function paging(){
+
+    var imgNumber = $('.photo-list').length;
+    for(var i=0; i<imgNumber; i++){
+      $('.radio-box').append('<li class="radio-box-item"><a href="#" class="radio-box">' + (i+1) + '</a></li>');
+    }
+  }
 
 
-//
-//
-//  function autoRolling(){// 자동 롤링
-//
-//    timeId = setInterval(function(){
-//      nextIndex = currentIndex + 1;
-//      moveLeft();
-//    }, 3000);
-//
-//  }
-//
-//
-//
-//
-//  function marginControlWrap(){
-//    var wrapWidth = $('.photo .radio-box').width();
-//    $('.photo .radio-box').css({
-//      'margin-left' : -(wrapWidth/2)
-//    });
-//  }
-//
-//  // 이미지 개수 만큼
-//  //function paging(){
-//  //  var imgNumber = $('.js-sliding .view-image').length;   // size() : 개수 구하는 함수
-//  //  for(var i=0; i<imgNumber; i++){    // 이미지 개수 만큼 반복할 for
-//  //    $('.js-sliding .paging').append('<li class="paging-item"><a href="#" class="paging-link">' + (i+1) + '</a></li>');
-//  //  }
-//  //}
-//
-//
-//
-//
+
+  // 실행부
+  init();
+
+  $('.photo-list-button-right').on('click',function(){
+    nextIndex = currentIndex + 1;
+    if( !$('.photo-list').is(':animated')){
+      moveLeft();
+    }
+  });
+
+  $('.photo-list-button-left').on('click',function(){
+    nextIndex = currentIndex - 1;
+    if( !$('.photo-list').is(':animated')){
+      moveRight();
+    }
+
+    $(document).on('click','.paging-item', function(e) {
+
+      e.preventDefault();
+
+  });
+  });
+
 });
-
-//
-//
-//  // 실행부
-//  init();
-//
-//
-//  $('.arrow.right').on('click',function(){
-//
-//    clearInterval(checkId);
-//    clearInterval(timeId);
-//
-//    var  count = 0;
-//    checkId = setInterval(function(){
-//      if(count == 5){
-//        autoRolling();
-//        clearInterval(checkId);
-//      }
-//      count++;
-//    },1000);
-//    nextIndex = currentIndex + 1;
-//    if( !$('.photo-list-item').is(':animated')){
-//      moveLeft();
-//    }
-//
-//  });
-//
-//
-//  $('.arrow.left').on('click',function(){
-//
-//    clearInterval(checkId);
-//    clearInterval(timeId);
-//
-//    var  count = 0;
-//    checkId = setInterval(function(){
-//      if(count == 5){
-//        autoRolling();
-//        clearInterval(checkId);
-//      }
-//      count++;
-//    },1000);
-//    nextIndex = currentIndex -1;
-//
-//    if( !$('.photo-list-item').is(':animated')){
-//      moveRight();
-//    }
-//
-//  });
-//
-//
-//
-//});
