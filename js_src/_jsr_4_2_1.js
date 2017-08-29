@@ -6,13 +6,16 @@
 $(function(){
   //선언부
 
-  $('.photo-list-item-link').on('click', function(){
-      $(this).next('.popup-wrap').stop().fadeIn(300);
-    });
+  $('.photo-list-item-link').on('click', function(e){
+    e.preventDefault();
+    $(this).next('.popup-wrap').stop().fadeIn(300);
+    $('.photo-list-button').addClass('on');
 
+    });
 
   $('.close-button').on('click',function(){
     $(this).parent('.popup-wrap').stop().fadeOut(300);
+    $('.photo-list-button').removeClass('on');
   });
 
 
@@ -85,12 +88,7 @@ $(function(){
     if( !$('.photo-list').is(':animated')){
       moveRight();
     }
-
-    $(document).on('click','.paging-item', function(e) {
-
-      e.preventDefault();
-
   });
-  });
+
 
 });
