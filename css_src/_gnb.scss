@@ -40,13 +40,9 @@
       font-size:20px;
       font-weight:bold;
       transition:all .5s ease-out;
-      padding:40px 11px;
+      margin:40px 11px;
 
-      //&:hover{
-      //  color:#fff;
-      //}
-
-      &.on{
+      &:hover, &.on{
         color:#fff;
       }
     }
@@ -96,6 +92,7 @@
     &-link{
       display:block;
       color:#000;
+      transition: all .2s ease-out;
 
       &:hover, &.on{
         color:#fff;

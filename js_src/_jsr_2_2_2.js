@@ -50,7 +50,7 @@ $(function(){
     }
   };
 
-  $('.slide-list-item').on('mouseenter', function(){
+  $('.slide-list-item').on('click', function(){
     calculateRatio.changeImage( $(this) );
     calculateRatio.applyBig();
   });
@@ -59,11 +59,9 @@ $(function(){
     calculateRatio.applyBig();
   });
 
+  $(function(){
 
 
-
-
-  // 화살표 클릭시
-
+  });
 
 });
