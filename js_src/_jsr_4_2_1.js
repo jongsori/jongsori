@@ -27,6 +27,7 @@ $(function(){
     $('.photo-list').eq(0).css({left : 0});
     $('.photo-list').eq(1).css({left : 850});
     $('.photo-list').eq(2).css({left : -850});
+    $('.photo-list').eq(3).css({left : -850});
 
 
     //radio-box 의 순서대로 photo-list 페이지도 바뀜
