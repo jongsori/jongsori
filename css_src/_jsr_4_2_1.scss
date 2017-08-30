@@ -27,27 +27,34 @@
       clear: both;
     }
 
-    &-button-left {
-      background: url(../images/image_sprite.png) no-repeat -265px -170px;
-      text-indent: -999999em;
-      width: 34px;
-      height: 50px;
-      position: absolute;
-      top: 575px;
-      left: 531px;
-      cursor: pointer;
+    &-button{
+      &.on{
+        display: none;
+      }
+
+      &-left {
+        background: url(../images/image_sprite.png) no-repeat -265px -170px;
+        text-indent: -999999em;
+        width: 34px;
+        height: 50px;
+        position: absolute;
+        top: 575px;
+        left: 531px;
+        cursor: pointer;
+      }
+
+      &-right {
+        background: url(../images/image_sprite.png) no-repeat -299px -170px;
+        text-indent: -999999em;
+        width: 34px;
+        height: 50px;
+        position: absolute;
+        top: 575px;
+        right: 306px;
+        cursor: pointer;
+      }
     }
 
-    &-button-right {
-      background: url(../images/image_sprite.png) no-repeat -299px -170px;
-      text-indent: -999999em;
-      width: 34px;
-      height: 50px;
-      position: absolute;
-      top: 575px;
-      right: 306px;
-      cursor: pointer;
-    }
 
     &-item {
       overflow: hidden;
