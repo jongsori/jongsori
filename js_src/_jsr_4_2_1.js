@@ -10,12 +10,14 @@ $(function(){
     e.preventDefault();
     $(this).next('.popup-wrap').stop().fadeIn(300);
     $('.photo-list-button').addClass('on');
+    $('.radio-box').addClass('on');
 
     });
 
   $('.close-button').on('click',function(){
     $(this).parent('.popup-wrap').stop().fadeOut(300);
     $('.photo-list-button').removeClass('on');
+    $('.radio-box').removeClass('on');
   });
 
 
@@ -27,8 +29,9 @@ $(function(){
     $('.photo-list').eq(2).css({left : -850});
     $('.photo-list').eq(3).css({left : -850});
 
-    //marginControlWrap();
-    //paging();
+
+    //radio-box 의 순서대로 photo-list 페이지도 바뀜
+    $('.radio-box-list').eq(0).children().addClass('on')
   }
 
   var currentIndex = 0;
@@ -46,7 +49,10 @@ $(function(){
 
     nextIndex++;
 
-    console.log( currentIndex );
+    //다음 버튼의 색깔이 바뀜
+    $('.radio-box-list').children().removeClass('on');
+    $('.radio-box-list').eq(currentIndex).children().addClass('on');
+
   }
 
   function moveRight(){
@@ -60,17 +66,12 @@ $(function(){
 
     currentIndex = nextIndex;
     nextIndex--;
+
+    // 다음 버튼의 색깔이 바뀜
+    $('.radio-box-list').children().removeClass('on');
+    $('.radio-box-list').eq(currentIndex).children().addClass('on');
   }
 
-
-
-  function paging(){
-
-    var imgNumber = $('.photo-list').length;
-    for(var i=0; i<imgNumber; i++){
-      $('.radio-box').append('<li class="radio-box-item"><a href="#" class="radio-box">' + (i+1) + '</a></li>');
-    }
-  }
 
 
 
@@ -91,5 +92,14 @@ $(function(){
     }
   });
 
+
+  //indicator index
+  $('.indicator a').click(function(){
+    var paging = $(this).index();
+    $('.photo-list').animate({left : 850}, 2000, 'easeOutExpo');
+    $('.indicator a').removeClass('on');
+    $('.indicator a').eq(paging).addClass('on');
+
+  })
 
 });

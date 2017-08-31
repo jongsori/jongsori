@@ -10,190 +10,195 @@
   }
 
 
-
-.photo {
-  width: 850px;
-  height:680px;
-  overflow:hidden;
-  position:relative;
-
-  &-list {
-    width: 880px;
-    height: 690px;
+.photo-wrap{
+  &:after{
+    content: "";
+    display:block;
+    clear: both;
+  }
+  .radio-box {
     position: absolute;
-    &:after{
-      content: "";
-      display: block;
-      clear: both;
+    width: 250px;
+    height:25px;
+    top: 960px;
+    margin-left: 388px;
+    z-index: 9999999;
+
+    &.on{
+      display: none;
     }
 
-    &-button{
-      &.on{
-        display: none;
-      }
-
-      &-left {
-        background: url(../images/image_sprite.png) no-repeat -265px -170px;
-        text-indent: -999999em;
-        width: 34px;
-        height: 50px;
-        position: absolute;
-        top: 575px;
-        left: 531px;
-        cursor: pointer;
-      }
-
-      &-right {
-        background: url(../images/image_sprite.png) no-repeat -299px -170px;
-        text-indent: -999999em;
-        width: 34px;
-        height: 50px;
-        position: absolute;
-        top: 575px;
-        right: 306px;
-        cursor: pointer;
-      }
-    }
-
-
-    &-item {
-      overflow: hidden;
-      width: 274px;
-      height: 306px;
+    &-list {
+      margin-right: 20px;
       float: left;
-      margin-right: 14px;
-      padding-bottom: 68px;
 
-      &-link {
-        position: absolute;
-        width: 276px;
-        text-align: center;
+    }
+    &-link{
+      display:block;
+      width: 16px;
+      height: 16px;
+      background: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      &:hover, &.on{
+        background: #ffcd12;
+      }
+    }
+  }
 
+
+  .photo {
+    width: 850px;
+    height:680px;
+    overflow:hidden;
+    position:relative;
+
+    &-list {
+      width: 880px;
+      height: 690px;
+      position: absolute;
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
       }
 
-      &-mask {
+      &-button{
+        &.on{
+          display: none;
+        }
+
+        &-left {
+          background: url(../images/image_sprite.png) no-repeat -265px -170px;
+          text-indent: -999999em;
+          width: 34px;
+          height: 50px;
+          position: absolute;
+          top: 575px;
+          left: 531px;
+          cursor: pointer;
+        }
+
+        &-right {
+          background: url(../images/image_sprite.png) no-repeat -299px -170px;
+          text-indent: -999999em;
+          width: 34px;
+          height: 50px;
+          position: absolute;
+          top: 575px;
+          right: 306px;
+          cursor: pointer;
+        }
+      }
+
+
+      &-item {
+        overflow: hidden;
         width: 274px;
         height: 306px;
-        position: absolute;
-        left: 0;
-        overflow: hidden;
+        float: left;
+        margin-right: 14px;
+        padding-bottom: 68px;
 
-        &:hover:before {
-          display: block;
+        &-link {
+          position: absolute;
+          width: 276px;
+          text-align: center;
         }
-        &:hover > p {
-          display: block;
-        }
-        &:before {
-          content: "";
-          display: none;
+
+        &-mask {
           width: 274px;
-          height: 100%;
+          height: 306px;
           position: absolute;
-          background: #000;
-          opacity: 0.6;
           left: 0;
+          overflow: hidden;
 
+          &:hover:before {
+            display: block;
+          }
+          &:hover > p {
+            display: block;
+          }
+          &:before {
+            content: "";
+            display: none;
+            width: 274px;
+            height: 100%;
+            position: absolute;
+            background: #000;
+            opacity: 0.6;
+            left: 0;
+
+          }
+          & > p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+          }
         }
-        & > p {
+
+        .popup-wrap {
+          display:none;
+          width: 850px;
+          height: 690px;
           position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          display: none;
-        }
-      }
+          background: url(../images/popup_bg.jpg) no-repeat;
+          top: 0;
+          left: 0;
+          z-index: 2;
 
-      .popup-wrap {
-        display:none;
-        width: 850px;
-        height: 690px;
-        position: absolute;
-        background: url(../images/popup_bg.jpg) no-repeat;
-        top: 0;
-        left: 0;
-        z-index: 2;
+          &-story {
 
-        &-story {
+            &-heading {
+              font-size: 20px;
+              font-weight: 700;
+              margin: 30px 0 10px 30px;
+              float: left;
+            }
+            &-name {
+              font-size: 20px;
+              font-weight: 700;
+              margin: 30px 0 10px 210px;
+              float: left;
+            }
+            &-date {
+              font-size: 20px;
+              font-weight: 700;
+              float: right;
+              margin: 32px 70px 0 0;
+            }
+            &-paragraph {
+              width: 580px;
+              height: 600px;
+              float: left;
+              color: #000;
+              margin-left: 100px;
+              line-height: 3;
+              padding-top: 86px;
+            }
 
-          &-heading {
-            font-size: 20px;
-            font-weight: 700;
-            margin: 30px 0 10px 30px;
-            float: left;
-          }
-          &-name {
-            font-size: 20px;
-            font-weight: 700;
-            margin: 30px 0 10px 210px;
-            float: left;
-          }
-          &-date {
-            font-size: 20px;
-            font-weight: 700;
-            float: right;
-            margin: 32px 70px 0 0;
-          }
-          &-paragraph {
-            width: 580px;
-            height: 600px;
-            float: left;
-            color: #000;
-            margin-left: 100px;
-            line-height: 3;
-            padding-top: 86px;
           }
 
-        }
+          .close-button {
+            width: 24px;
+            height: 26px;
+            top: 27px;
+            right: 12px;
+            position: absolute;
+            text-indent: -999999999em;
+            border: 0;
+            background: url(../images/close.png) no-repeat;
+            cursor:pointer;
 
-        .close-button {
-          width: 24px;
-          height: 26px;
-          top: 27px;
-          right: 12px;
-          position: absolute;
-          text-indent: -999999999em;
-          border: 0;
-          background: url(../images/close.png) no-repeat;
-          cursor:pointer;
-
+          }
         }
       }
     }
-  }
-
-
-
-
-  .radio-box {
-    width: 200px;
-    height: 16px;
-    margin-left: 394px;
-    top: 970px;
-    position: absolute;
-    z-index: 999;
-
-    &:after{
-      content: "";
-      display: block;
-      clear: both;
-    }
-
-    &-item {
-      float: left;
-      width: 20px;
-      height: 20px;
-
-      .current {
-        &:hover {
-          @extend %clearfix;
-          color: #ffcd12;
-        }
-      }
-    }
-
   }
 }
+
 
 
 
