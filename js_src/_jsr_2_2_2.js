@@ -8,6 +8,7 @@ $(function(){
     $('.slide-wrap-bigimage').eq(0).css({left : 0});
     $('.slide-wrap-bigimage').eq(1).css({left : 850});
     $('.slide-wrap-bigimage').eq(2).css({left : -850});
+    $('.slide-wrap-bigimage').eq(3).css({left : 850});
 
   }
 
@@ -61,6 +62,7 @@ $(function(){
   });
 
 
+
   var onmouseover = {
     $imageBig: $('.slide-wrap-bigimage'),
     $imageThumb: $('.slide-list-image'),
@@ -75,7 +77,7 @@ $(function(){
     onmouseover.changeImage( $(this) );
   });
   $('.slide').on('mouseleave', function(){
-    onmouseover.changeImage( $('.slide-list-item').eq(0) );
+    onmouseover.changeImage();
   });
 
 });
