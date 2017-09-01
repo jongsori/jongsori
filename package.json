@@ -16,5 +16,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-watch": "^4.3.11"
+  },
+  "dependencies": {
+    "forecast": "^0.3.2"
   }
 }
