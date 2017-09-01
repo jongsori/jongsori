@@ -78,6 +78,7 @@ $(function(){
   checkDepth2();
 
 
+
   $('.gnb-depth1-link').on('mouseenter', function(){
 
     $('.gnb-depth2-wrap').removeClass('on');
