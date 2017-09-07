@@ -62,7 +62,6 @@ $(function(){
   });
 
 
-
   var onmouseover = {
     $imageBig: $('.slide-wrap-bigimage'),
     $imageThumb: $('.slide-list-image'),
