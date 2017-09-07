@@ -78,13 +78,13 @@ $(function(){
       if( currentIndex == 0 ){
 
         if( radioIndex == $('.slide-list').length-1 ){
-          nextIndex = currentIndex - 1;
           if( !$('.slide-list').is(':animated') ){
+          nextIndex = currentIndex - 1;
             moveRight();
           }
         } else {
-          nextIndex = currentIndex + 1;
           if( !$('.slide-list').is(':animated') ){
+          nextIndex = currentIndex + 1;
             moveLeft();
           }
         }
@@ -92,13 +92,13 @@ $(function(){
       } else if( currentIndex == $('.slide-list').length-1 ){
 
         if( radioIndex == 0 ){
-          nextIndex = currentIndex + 1;
           if( !$('.slide-list').is(':animated') ){
+          nextIndex = currentIndex + 1;
             moveLeft();
           }
         } else {
-          nextIndex = currentIndex - 1;
           if( !$('.slide-list').is(':animated') ){
+          nextIndex = currentIndex - 1;
             moveRight();
           }
         }
@@ -106,13 +106,13 @@ $(function(){
       } else {
 
         if( currentIndex < radioIndex ){
-          nextIndex = currentIndex + 1;
           if( !$('.slide-list').is(':animated') ){
+          nextIndex = currentIndex + 1;
             moveLeft();
           }
         } else {
-          nextIndex = currentIndex - 1;
           if( !$('.slide-list').is(':animated') ){
+          nextIndex = currentIndex - 1;
             moveRight();
           }
         }
