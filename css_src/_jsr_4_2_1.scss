@@ -9,272 +9,196 @@
   background: url(../images/review-bg.jpg) no-repeat fixed;
   }
 
-.photo {
-  width: 1050px;
 
-  &-list {
+.photo-wrap{
+  &:after{
     content: "";
-    display: block;
+    display:block;
     clear: both;
-
-    position: relative;
-
-    &-button-right{
-      background: url(../images/image_sprite.png)no-repeat -265px -170px;
-      text-indent: -999999em;
-      width: 34px;
-      height: 50px;
-      position: absolute;
-      top: 575px;
-      left: 590px;
-      cursor: pointer;
-    }
-
-    &-button-left{
-      background: url(../images/image_sprite.png)no-repeat -299px -170px;
-      text-indent: -999999em;
-      width: 34px;
-      height: 50px;
-      position: absolute;
-      top: 575px;
-      right:352px;
-      cursor: pointer;
+  }
+  .radio-box {
+    position: absolute;
+    width: 250px;
+    height:25px;
+    top: 960px;
+    margin-left: 388px;
+    z-index: 9999999;
+    &.on{
+      display: none;
     }
 
 
-    &-item{
-      overflow: hidden;
-      width: 274px;
-      height: 306px;
+    &-list {
+      margin-right: 20px;
       float: left;
-      margin-right: 14px;
-      padding-bottom:68px;
 
-      &-link{
-        position: absolute;
-        width: 276px;
-        text-align: center;
+    }
+    &-link{
+      display:block;
+      width: 16px;
+      height: 16px;
+      background: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      &:hover, &.on{
+        background: #ffcd12;
+      }
+    }
+  }
 
+
+  .photo {
+    width: 850px;
+    height:680px;
+    overflow:hidden;
+    position:relative;
+
+    &-list {
+      width: 880px;
+      height: 690px;
+      position: absolute;
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
       }
 
-      &-mask{
-        width: 274px;
-        height: 306px;
-        position: absolute;
-        left: 0;
-        overflow: hidden;
-
-        &:hover:before{
-          display: block;
-        }
-        &:hover > p{
-          display:block;
-        }
-        &:before{
-          content: "";
-          display:none;
-          width: 274px;
-          height: 100%;
-          position: absolute;
-          background: #000;
-          opacity: 0.6;
-          left: 0;
-
-        }
-        &> p{
-          position:absolute;
-          top:50%;
-          left:50%;
-          transform: translate( -50%, -50%);
+      &-button{
+        &.on{
           display: none;
         }
-      }
 
-      .popup-wrap {
-        opacity:0;
-        -webkit-transition: opacity 400ms ease-in;
-        -moz-transition: opacity 400ms ease-in;
-        transition: opacity 400ms ease-in;
-        pointer-events: none;
-        width: 850px;
-        height: 690px;
-        position:absolute;
-        background: url(../images/popup_bg.jpg) no-repeat;
-        top:0;
-        left:0;
-        z-index:2;
-
-
-        &-story {
-
-          &-heading {
-            font-size: 20px;
-            font-weight: 700;
-            margin: 30px 0 10px 30px;
-            float: left;
-          }
-          &-name {
-            font-size: 20px;
-            font-weight: 700;
-            margin: 30px 0 10px 386px;
-            float: left;
-          }
-          &-date {
-            font-size: 20px;
-            font-weight: 700;
-            float: right;
-            margin: 32px 20px 0 0;
-          }
-          &-paragraph {
-            width: 580px;
-            height: 600px;
-            float: left;
-            color: #000;
-            margin-left: 100px;
-            line-height: 3;
-            padding-top: 86px;
-          }
-
-        }
-
-        .close-button{
-          width: 35px;
-          height: 36px;
-          top: -70px;
-          right: -50px;
+        &-left {
+          background: url(../images/image_sprite.png) no-repeat -265px -170px;
+          text-indent: -999999em;
+          width: 34px;
+          height: 50px;
           position: absolute;
-          text-indent: -999999999em;
-          border: 0;
-          background: url(../images/image_sprite.png)no-repeat -228px -255px;
+          top: 575px;
+          left: 531px;
           cursor: pointer;
+        }
 
+        &-right {
+          background: url(../images/image_sprite.png) no-repeat -299px -170px;
+          text-indent: -999999em;
+          width: 34px;
+          height: 50px;
+          position: absolute;
+          top: 575px;
+          right: 306px;
+          cursor: pointer;
+        }
+      }
+
+
+      &-item {
+        overflow: hidden;
+        width: 274px;
+        height: 306px;
+        float: left;
+        margin-right: 14px;
+        padding-bottom: 68px;
+
+        &-link {
+          position: absolute;
+          width: 276px;
+          text-align: center;
+        }
+
+        &-mask {
+          width: 274px;
+          height: 306px;
+          position: absolute;
+          left: 0;
+          overflow: hidden;
+
+          &:hover:before {
+            display: block;
+          }
+          &:hover > p {
+            display: block;
+          }
+          &:before {
+            content: "";
+            display: none;
+            width: 274px;
+            height: 100%;
+            position: absolute;
+            background: #000;
+            opacity: 0.6;
+            left: 0;
+
+          }
+          & > p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+          }
+        }
+
+        .popup-wrap {
+          display:none;
+          width: 850px;
+          height: 690px;
+          position: absolute;
+          background: url(../images/popup_bg.jpg) no-repeat;
+          top: 0;
+          left: 0;
+          z-index: 2;
+
+          &-story {
+
+            &-heading {
+              font-size: 20px;
+              font-weight: 700;
+              margin: 30px 0 10px 30px;
+              float: left;
+            }
+            &-name {
+              font-size: 20px;
+              font-weight: 700;
+              margin: 30px 0 10px 210px;
+              float: left;
+            }
+            &-date {
+              font-size: 20px;
+              font-weight: 700;
+              float: right;
+              margin: 32px 70px 0 0;
+            }
+            &-paragraph {
+              width: 580px;
+              height: 600px;
+              float: left;
+              color: #000;
+              margin-left: 100px;
+              line-height: 3;
+              padding-top: 86px;
+            }
+
+          }
+
+          .close-button {
+            width: 24px;
+            height: 26px;
+            top: 27px;
+            right: 12px;
+            position: absolute;
+            text-indent: -999999999em;
+            border: 0;
+            background: url(../images/close.png) no-repeat;
+            cursor:pointer;
+
+          }
         }
       }
     }
   }
 }
 
-#layer01:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer02:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer03:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer04:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer05:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer06:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer07:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer08:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer09:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer10:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer11:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer12:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer13:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer14:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer15:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer16:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer17:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-#layer18:target {
-  opacity:1;
-  pointer-events: auto;
-
-}
-
-
-
-
-
-
-
-
-
-.radio-box{
-  width: 200px;
-  height: 16px;
-  margin-left: 394px;
-  top: 970px;
-  position:absolute;
-
-  &-item{
-    float: left;
-    width: 20px;
-    height: 20px;
-
-
-    .current{
-      &:hover{
-        @extend %clearfix;
-        color: #ffcd12;
-      }
-    }
-  }
-
-}
 
 
 

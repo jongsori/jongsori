@@ -16,7 +16,7 @@
     text-align: center;
     margin-left: -140px;
 
-    &-text{
+    &-wrap{
       color: #fff;
       text-align: justify;
       width: 540px;
@@ -27,7 +27,37 @@
       position: absolute;
       margin-left: -275px;
       line-height: 1.6;
-    }
 
+      &-text1,
+      &-text2,
+      &-text3,
+      &-text4,
+      &-text5,
+      &-text6,
+      &-text7,
+      &-text8,
+      &-text9,
+      &-text10,
+      &-text11{
+        opacity:0;
+        transition:all .5s ease-out;
+      }
+
+      &-text1.on,
+      &-text2.on,
+      &-text3.on,
+      &-text4.on,
+      &-text5.on,
+      &-text6.on,
+      &-text7.on,
+      &-text8.on,
+      &-text9.on,
+      &-text10.on,
+      &-text11.on{
+        opacity:1;
+      }
+
+
+    }
   }
 }

@@ -28,16 +28,18 @@
 }
 
 .content{
-
 }
 
 .data{
+  @extend %clearfix;
 
   &-image{
     float: left;
   }
 
   &-wrap{
+    float: right;
+    width: 500px;
 
     &-title{
       font-size: 25px;
@@ -75,14 +77,25 @@
 
 .slide{
 
+  &-w{
+    position: relative;
+  }
+
   &-wrap{
+    width:850px;
+    height:448px;
+    overflow: hidden;
 
     position: relative;
 
     &-bigimage{
       width: 850px;
       height: 448px;
-      margin-bottom: 14px;
+      //margin-bottom: 14px;
+
+      position: absolute;
+      left: 0;
+
     }
 
   }
@@ -101,6 +114,7 @@
       margin-left:-64px;
       text-indent:-99999px;
       cursor: pointer;
+      outline: none;
     }
 
     &-right{
@@ -113,6 +127,7 @@
       margin-right:-64px;
       text-indent:-99999px;
       cursor: pointer;
+      outline: none;
     }
   }
 
@@ -125,7 +140,7 @@
       height: 128px;
       overflow: hidden;
       float: left;
-      margin-right: 14px;
+      margin: 14px 14px 0 0;
 
       &:hover>.slide-list-image{
         transform: scale(1.2,1.2);
@@ -139,10 +154,14 @@
 
 
     &-image{
-      width:auto;
+      width: 202px;
       height:100%;
 
       transition: transform 1s ease-out;
+
+      &:hover{
+        cursor: pointer;
+      }
     }
 
   }

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"  charset="UTF-8">
   <title></title>
   <link rel="stylesheet" href="../css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Kanit:700" rel="stylesheet">
   <script src="../js/lib/jquery-3.2.1.min.js"></script>
+  <script src="../js/lib/jquery-ui.min.js"></script>
   <script src="../js/gnb.js"></script>
 </head>
 <body>
@@ -63,7 +64,71 @@
     </div>
 
     <div class="map">
-      <img src="../images/course1.png" />
+      <div id="map" style="width:850px; height:498px;"></div>
+      <script>
+
+        var flightPlanCoordinates = [];
+        var initCenter = {lat: 37.573641, lng: 126.979538};
+        var map;
+
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: initCenter,
+            mapTypeId: 'roadmap'
+          });
+
+          var flightPath = new google.maps.Polyline({
+            path: flightPlanCoordinates,
+            geodesic: true,
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 2
+          });
+
+          flightPath.setMap(map);
+        }
+
+
+        $(function(){
+
+          var marker = [];
+          var sumLat = 0;
+          var sumLng = 0;
+          var avgLat;
+          var avgLng;
+
+          $('input[type=checkbox]').on('change', function(){
+
+            var radioIndex = $(this).index( 'input[type=checkbox]' );
+
+            flightPlanCoordinates.push( $(this).data() );
+
+            marker.push(new google.maps.Marker({
+              position: $(this).data()
+            }));
+
+            sumLat += $(this).data().lat;
+            sumLng += $(this).data().lng;
+
+            avgLat = sumLat / flightPlanCoordinates.length;
+            avgLng = sumLng / flightPlanCoordinates.length;
+
+            console.log( sumLat, sumLng );
+            console.log( avgLat, avgLng );
+
+            initMap();
+            map.setCenter({lat: avgLat, lng: avgLng});
+
+            for(var j=0; j<marker.length;j++){
+              marker[j].setMap(map);
+            }
+
+          });
+
+        });
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfFQYjP4NBkHalxFA_7mYs9Xw9XTCiuVE&callback=initMap"></script>
     </div>
 
     <div class="place">
@@ -80,43 +145,43 @@
 
       <ul class="place-list">
         <li class="place-list-item">
-          <input id="kyougbok" type="checkbox" value="경복궁" name="place" />
+          <input id="kyougbok" type="checkbox" value="경복궁" name="place" data-lat="37.579626" data-lng="126.977038"  />
           <label for="kyougbok">경복궁</label>
         </li>
         <li class="place-list-item">
-          <input id="gwangjang" type="checkbox" value="광장시장" name="place" />
+          <input id="gwangjang" type="checkbox" value="광장시장" name="place" data-lat="37.570191" data-lng="126.999361"  />
           <label for="gwangjang">광장시장</label>
         </li>
         <li class="place-list-item">
-          <input id="naksan" type="checkbox" value="낙산공원" name="place" />
+          <input id="naksan" type="checkbox" value="낙산공원" name="place" data-lat="37.580709" data-lng="127.007461"  />
           <label for="naksan">낙산공원</label>
         </li>
         <li class="place-list-item">
-          <input id="daelim" type="checkbox" value="대림미술관" name="place" />
+          <input id="daelim" type="checkbox" value="대림미술관" name="place" data-lat="37.577504" data-lng="126.973361"  />
           <label for="daelim">대림미술관</label>
         </li>
         <li class="place-list-item right">
-          <input id="dongdaemun" type="checkbox" value="동대문" name="place" />
+          <input id="dongdaemun" type="checkbox" value="동대문" name="place" data-lat="37.571244" data-lng="127.009567"  />
           <label for="dongdaemun">동대문</label>
         </li>
         <li class="place-list-item">
-          <input id="hanok" type="checkbox" value="북촌한옥마을" name="place" />
+          <input id="hanok" type="checkbox" value="북촌한옥마을" name="place" data-lat="37.579082" data-lng="126.986462"  />
           <label for="hanok">북촌한옥마을</label>
         </li>
         <li class="place-list-item">
-          <input id="samcheong" type="checkbox" value="삼청공원" name="place" />
+          <input id="samcheong" type="checkbox" value="삼청공원" name="place" data-lat="37.590359" data-lng="126.985934"  />
           <label for="samcheong">삼청공원</label>
         </li>
         <li class="place-list-item">
-          <input id="ssamji" type="checkbox" value="쌈지길" name="place" />
+          <input id="ssamji" type="checkbox" value="쌈지길" name="place" data-lat="37.574257" data-lng="126.984787"  />
           <label for="ssamji">쌈지길</label>
         </li>
         <li class="place-list-item">
-          <input id="jongmyo" type="checkbox" value="종묘" name="place" />
+          <input id="jongmyo" type="checkbox" value="종묘" name="place" data-lat="37.574574" data-lng="126.994111"  />
           <label for="jongmyo">종묘</label>
         </li>
         <li class="place-list-item right">
-          <input id="changkyung" type="checkbox" value="창경궁" name="place" />
+          <input id="changkyung" type="checkbox" value="창경궁" name="place" data-lat="37.578703" data-lng="126.994861"  />
           <label for="changkyung">창경궁</label>
         </li>
       </ul>

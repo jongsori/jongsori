@@ -3,124 +3,155 @@
  */
 
 
+$(function() {
 
-$(function(){
-  function moveRight(){
 
-    if(nextIndex <= -1) {
-      nextIndex = $('.view-image').length-1;
+  // 팝업 show &  hide
+  $('.photo-list-item-link').on('click', function (e) {
+    e.preventDefault();
+    $(this).next('.popup-wrap').stop().fadeIn(300);
+    $('.photo-list-button').addClass('on');
+    $('.radio-box').addClass('on');
+
+  });
+
+  $('.close-button').on('click', function () {
+    $(this).parent('.popup-wrap').stop().fadeOut(300);
+    $('.photo-list-button').removeClass('on');
+    $('.radio-box').removeClass('on');
+  });
+
+
+  // 리스트 슬라이딩
+
+  //선언부
+  function init() {
+    $('.photo-list').eq(0).css({left: 0});
+    $('.photo-list').eq(1).css({left: 850});
+    $('.photo-list').eq(2).css({left: -850});
+
+
+    //radio-box 의 순서대로 photo-list 페이지도 바뀜
+    $('.radio-box-list').eq(0).children().addClass('on')
+  }
+
+  var currentIndex = 0;
+  var nextIndex = 0;
+
+  function moveLeft() {
+    if (nextIndex >= $('.photo-list').length) {
+      nextIndex = 0;
+    }
+
+    $('.photo-list').eq(currentIndex).stop().animate({left: -850}, 2000, 'easeOutExpo');
+    $('.photo-list').eq(nextIndex).css({left: 850}).stop().animate({left: 0}, 2000, 'easeOutExpo');
+
+    currentIndex = nextIndex;
+
+    nextIndex++;
+
+    //다음 버튼의 색깔이 바뀜
+    $('.radio-box-list').children().removeClass('on');
+    $('.radio-box-list').eq(currentIndex).children().addClass('on');
+
+  }
+
+  function moveRight() {
+
+    if (nextIndex <= -1) {
+      nextIndex = $('.photo-list').length - 1;
+    }
+
+    $('.photo-list').eq(currentIndex).stop().animate({left: 850}, 2000, 'easeOutExpo');
+    $('.photo-list').eq(nextIndex).css({left: -850}).stop().animate({left: 0}, 2000, 'easeOutExpo');
+
+    currentIndex = nextIndex;
+    nextIndex--;
+
+    // 다음 버튼의 색깔이 바뀜
+    $('.radio-box-list').children().removeClass('on');
+    $('.radio-box-list').eq(currentIndex).children().addClass('on');
+  }
+
+
+  // 실행부
+  init();
+
+  $('.photo-list-button-right').on('click', function () {
+    nextIndex = currentIndex + 1;
+    if (!$('.photo-list').is(':animated')) {
+      moveLeft();
+    }
+  });
+
+  $('.photo-list-button-left').on('click', function () {
+    nextIndex = currentIndex - 1;
+    if (!$('.photo-list').is(':animated')) {
+      moveRight();
+    }
+  });
+
+  $('.radio-box-link').on('click', function(){
+
+    var radioIndex = $(this).index('.radio-box-link');
+
+    nextIndex = radioIndex;
+    //
+    //if (!$('.photo-list').is(':animated')) {
+    //  moveLeft();
+    //}
+
+
+    if( currentIndex != radioIndex ){
+
+      if( currentIndex == 0 ){
+
+        if( radioIndex == $('.photo-list').length-1 ){
+          nextIndex = currentIndex - 1;
+          if( !$('.photo-list').is(':animated') ){
+            moveRight();
+          }
+        } else {
+          nextIndex = currentIndex + 1;
+          if( !$('.photo-list').is(':animated') ){
+            moveLeft();
+          }
+        }
+
+      } else if( currentIndex == $('.photo-list').length-1 ){
+
+        if( radioIndex == 0 ){
+          nextIndex = currentIndex + 1;
+          if( !$('.photo-list').is(':animated') ){
+            moveLeft();
+          }
+        } else {
+          nextIndex = currentIndex - 1;
+          if( !$('.photo-list').is(':animated') ){
+            moveRight();
+          }
+        }
+
+      } else {
+
+        if( currentIndex < radioIndex ){
+          nextIndex = currentIndex + 1;
+          if( !$('.photo-list').is(':animated') ){
+            moveLeft();
+          }
+        } else {
+          nextIndex = currentIndex - 1;
+          if( !$('.photo-list').is(':animated') ){
+            moveRight();
+          }
+        }
+
+      }
+
     }
 
 
 
-    $('.photo-list-item').eq(currentIndex).stop().animate({left : 1050}, 2000, 'easeOutBounce');
+  });
 
-
-    $('.photo-list-item').eq(nextIndex).css({left : -1050}).stop().animate({left : 0}, 2000, 'easeOutBounce');
-
-
-    currentIndex = nextIndex;
-
-    nextIndex--;
-
-  }
-
-
-
-  //$('.photo-list-item').data('open','false').on('click',function(){
-  //  if($(this).data('open') == 'false'){
-  //    $(this).next().addClass('hidden');
-  //    $(this).data('open','true');
-  //  }else{
-  //    $(this).next().removeClass('hidden');
-  //    $(this).data('open','false');
-  //  }
-  //
-  //});
-
-
-//
-//
-//  function autoRolling(){// 자동 롤링
-//
-//    timeId = setInterval(function(){
-//      nextIndex = currentIndex + 1;
-//      moveLeft();
-//    }, 3000);
-//
-//  }
-//
-//
-//
-//
-//  function marginControlWrap(){
-//    var wrapWidth = $('.photo .radio-box').width();
-//    $('.photo .radio-box').css({
-//      'margin-left' : -(wrapWidth/2)
-//    });
-//  }
-//
-//  // 이미지 개수 만큼
-//  //function paging(){
-//  //  var imgNumber = $('.js-sliding .view-image').length;   // size() : 개수 구하는 함수
-//  //  for(var i=0; i<imgNumber; i++){    // 이미지 개수 만큼 반복할 for
-//  //    $('.js-sliding .paging').append('<li class="paging-item"><a href="#" class="paging-link">' + (i+1) + '</a></li>');
-//  //  }
-//  //}
-//
-//
-//
-//
 });
-
-//
-//
-//  // 실행부
-//  init();
-//
-//
-//  $('.arrow.right').on('click',function(){
-//
-//    clearInterval(checkId);
-//    clearInterval(timeId);
-//
-//    var  count = 0;
-//    checkId = setInterval(function(){
-//      if(count == 5){
-//        autoRolling();
-//        clearInterval(checkId);
-//      }
-//      count++;
-//    },1000);
-//    nextIndex = currentIndex + 1;
-//    if( !$('.photo-list-item').is(':animated')){
-//      moveLeft();
-//    }
-//
-//  });
-//
-//
-//  $('.arrow.left').on('click',function(){
-//
-//    clearInterval(checkId);
-//    clearInterval(timeId);
-//
-//    var  count = 0;
-//    checkId = setInterval(function(){
-//      if(count == 5){
-//        autoRolling();
-//        clearInterval(checkId);
-//      }
-//      count++;
-//    },1000);
-//    nextIndex = currentIndex -1;
-//
-//    if( !$('.photo-list-item').is(':animated')){
-//      moveRight();
-//    }
-//
-//  });
-//
-//
-//
-//});

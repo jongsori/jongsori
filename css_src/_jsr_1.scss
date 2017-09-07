@@ -27,4 +27,26 @@
   position: absolute;
   top: 30px;
   right: 30px;
+
+  @extend %clearfix;
+}
+
+.weather{
+
+  &-icon{
+    float:left;
+    margin: 15px 10px 0 0;
+  }
+
+  &-wrap{
+    float: right;
+    margin-top: 15px;
+  }
+  &-text{
+    margin-bottom:10px;
+  }
+
+  &-temp{
+
+  }
 }
