@@ -10,6 +10,7 @@ $(function(){
     $('.slide-wrap-bigimage').eq(2).css({left : -850});
     $('.slide-wrap-bigimage').eq(3).css({left : 850});
 
+    $('.slide-list-item').eq(0).children().addClass('on')
   }
 
   var currentIndex = 0;
@@ -47,36 +48,80 @@ $(function(){
   init();
 
   $('.slide-arrow-right').on('click',function(){
-    nextIndex = currentIndex + 1;
-    if( !$('.slide-list').is(':animated')){
+    if( !$('.slide-wrap-bigimage').is(':animated')){
+      nextIndex = currentIndex + 1;
       moveLeft();
     }
   });
 
   $('.slide-arrow-left').on('click',function(){
-    nextIndex = currentIndex - 1;
-    if( !$('.slide-list').is(':animated')){
+    if( !$('.slide-wrap-bigimage').is(':animated')){
+      nextIndex = currentIndex - 1;
       moveRight();
     }
 
   });
 
-
-  var onmouseover = {
-    $imageBig: $('.slide-wrap-bigimage'),
-    $imageThumb: $('.slide-list-image'),
-
-    changeImage : function( $overImage ){
-      var src = $overImage.children().attr('src');
-      $('.slide-wrap-bigimage').attr('src', src);
-    }
-  };
-
   $('.slide-list-item').on('click', function(){
-    onmouseover.changeImage( $(this) );
+
+    var radioIndex = $(this).index('.slide-list-item');
+
+    nextIndex = radioIndex;
+    //
+    //if (!$('.photo-list').is(':animated')) {
+    //  moveLeft();
+    //}
+
+
+    if( currentIndex != radioIndex ){
+
+      if( currentIndex == 0 ){
+
+        if( radioIndex == $('.slide-list').length-1 ){
+          nextIndex = currentIndex - 1;
+          if( !$('.slide-list').is(':animated') ){
+            moveRight();
+          }
+        } else {
+          nextIndex = currentIndex + 1;
+          if( !$('.slide-list').is(':animated') ){
+            moveLeft();
+          }
+        }
+
+      } else if( currentIndex == $('.slide-list').length-1 ){
+
+        if( radioIndex == 0 ){
+          nextIndex = currentIndex + 1;
+          if( !$('.slide-list').is(':animated') ){
+            moveLeft();
+          }
+        } else {
+          nextIndex = currentIndex - 1;
+          if( !$('.slide-list').is(':animated') ){
+            moveRight();
+          }
+        }
+
+      } else {
+
+        if( currentIndex < radioIndex ){
+          nextIndex = currentIndex + 1;
+          if( !$('.slide-list').is(':animated') ){
+            moveLeft();
+          }
+        } else {
+          nextIndex = currentIndex - 1;
+          if( !$('.slide-list').is(':animated') ){
+            moveRight();
+          }
+        }
+
+      }
+
+    }
+
   });
-  $('.slide').on('mouseleave', function(){
-    onmouseover.changeImage();
-  });
+
 
 });
