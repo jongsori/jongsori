@@ -26,9 +26,9 @@
 
   $(function(){
     function init(){
-      $('.exchange-rate-list-item').eq(0).css({top:0});
-      $('.exchange-rate-list-item').eq(1).css({top:'100%'});
-      $('.exchange-rate-list-item').eq(2).css({top:'-100%'});
+      $('.exchange-rate-list-item').eq(0).addClass('center');
+      $('.exchange-rate-list-item').eq(1).addClass('bottom');
+      $('.exchange-rate-list-item').eq(2).addClass('top');
     }
     var currentIndex = 0;
     var nextIndex = 0;
@@ -58,7 +58,26 @@
     init();
     autoRolling();
   });
-
+  jQuery(document).ready(function($) {
+    $.ajax({
+      //결과를 한글로 받을 수 있다.
+      url : "http://api.wunderground.com/api/d9f45faf33cb9139/geolookup/conditions/lang:KR/q/Korea/Seoul.json",
+      dataType : "jsonp",
+      success : function(parsed_json) {
+        // 관측지에 대한 정보
+        var observ = parsed_json.current_observation;
+        //var observ_s = observ.display_location.full;
+        // 날씨정보
+//        var weather_s = "<p class="+"weather-icon"+">"+"<img src='../images/"+ observ.icon +".png'/></p>";
+        var weather_s = "<p class="+"weather-icon"+">"+"<img src='"+observ.icon_url+"'/></p>";
+        weather_s += "<div class="+"weather-wrap"+">";
+        weather_s += "<p class="+"weather-text"+">"+observ.weather+"</p>";
+        weather_s += "<p class="+"weather-temp"+">"+observ.temp_c+" ℃ </p>";
+        weather_s += "</div>";
+        $("#weatherinfo").append(weather_s);
+      }
+    });
+  });
 </script>
 
 <section>
@@ -72,9 +91,9 @@
       <!-- 날씨정보 -->
     </div>
     <ul class="exchange-rate-list">
-      <li class="exchange-rate-list-item">USD 1$ ▶ KRW </li>
-      <li class="exchange-rate-list-item">CNY 1Y ▶ KRW </li>
-      <li class="exchange-rate-list-item">JPY 100Ұ ▶ KRW </li>
+      <li class="exchange-rate-list-item dollar">USD 1$ ▶ KRW </li>
+      <li class="exchange-rate-list-item yen">CNY 1Y ▶ KRW </li>
+      <li class="exchange-rate-list-item yuan">JPY 100Ұ ▶ KRW </li>
     </ul>
   </div>
 
