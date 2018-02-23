@@ -1,25 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%; overflow: hidden;">
 <head>
   <meta charset="UTF-8">
   <title></title>
   <link rel="stylesheet" href="../css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Kanit:700" rel="stylesheet">
   <script src="../js/lib/jquery-3.2.1.min.js"></script>
+  <script src="../js/lib/jquery-ui.min.js"></script>
+
 </head>
-<body>
-<section class="door">
-  <div class="door-inner-box">
-    <h1 class="door-greetings">WELCOMES JONG-NO !</h1>
-    <div class="door-language">
-      <ul class="door-language-list">
-        <li class="door-language-item"><a href="#" class="door-language-link">대한민국</a></li>
-        <li class="door-language-item"><a href="#" class="door-language-link">ENGLISH</a></li>
-        <li class="door-language-item"><a href="#" class="door-language-link">中國</a></li>
-        <li class="door-language-item"><a href="#" class="door-language-link">日本</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
+<body style="background-color: #111; height: 100%; ">
+  <a href="jsr_1.html" style="cursor:url(../images/mouse_pointer.png), auto; ">
+    <section class="space">space</section>
+    <section class="door">
+      <div class="door-inner-box">
+        <h1 class="door-greetings">WELCOMES JONG-NO !</h1>
+      </div>
+    </section>
+  </a>
 </body>
+<script type="text/javascript">
+  __wm.bt(550,27,25,2,"web","http://svay.com:80/experiences/css3-spotlight/","2012-04-19",1996);
+</script>
+<span id="spot" class="spotlight"></span>
+<script type="text/javascript">
+  var spot = document.getElementById('spot');
+  var width = document.documentElement.clientWidth;
+  var height = document.documentElement.clientHeight;
+
+  /* A bit of JS to respond to mouse events */
+  function moveSpot(e){
+    var x = 0;
+    var y = 0;
+
+    if (!e) var e = window.event;
+    if (e.pageX || e.pageY)
+    {
+      x = e.pageX;
+      y = e.pageY;
+    }
+    else if (e.clientX || e.clientY)
+    {
+      x = e.clientX + document.body.scrollLeft;
+      y = e.clientY + document.body.scrollTop;
+    }
+
+    if (navigator.userAgent.match('AppleWebKit')) {
+      var style = '-webkit-gradient(radial, '+x+' '+y+', 0, '+x+' '+y+', 300, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.8)), color-stop(0.8, rgba(0,0,0,0)))';
+    } else {
+      var style = '-moz-radial-gradient('+x+'px '+y+'px 45deg,circle closest-side,transparent 0,transparent 100px,rgba(0, 0, 0, 0.8) 120px)';
+    }
+    spot.style.backgroundImage = style;
+  }
+
+  window.onload = function() {
+    window.onmousemove = moveSpot;
+  }
+</script>
 </html>

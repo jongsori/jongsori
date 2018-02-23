@@ -1,67 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"  charset="UTF-8">
   <title></title>
   <link rel="stylesheet" href="../css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Kanit:700" rel="stylesheet">
   <script src="../js/lib/jquery-3.2.1.min.js"></script>
+  <script src="../js/lib/jquery-ui.min.js"></script>
   <script src="../js/gnb.js"></script>
 </head>
 <body>
 
 <header class="gnb">
-  <h1 class="gnb-logo"><a href="#" class="gnb-logo-link">JongSoRi</a></h1>
+  <h1 class="gnb-logo"><a href="jsr_1.html" class="gnb-logo-link">JongSoRi</a></h1>
   <nav class="gnb-menu">
     <ul class="gnb-depth1">
       <li class="gnb-depth1-item">
-        <a href="#" class="gnb-depth1-link">종로이야기</a>
+        <a href="jsr_2_1.html" class="gnb-depth1-link">종로이야기</a>
         <div class="gnb-depth2-wrap">
           <ul class="gnb-depth2">
-            <li class="gnb-depth2-item story"><a href="#" class="gnb-depth2-link">종로에대해서</a></li>
-            <li class="gnb-depth2-item story"><a href="#" class="gnb-depth2-link">명소</a></li>
-            <li class="gnb-depth2-item story"><a href="#" class="gnb-depth2-link">음식</a></li>
-            <li class="gnb-depth2-item story"><a href="#" class="gnb-depth2-link">체험</a></li>
-            <li class="gnb-depth2-item story"><a href="#" class="gnb-depth2-link">숙박</a></li>
+            <li class="gnb-depth2-item story"><a href="jsr_2_1.html" class="gnb-depth2-link">종로에대해서</a></li>
+            <li class="gnb-depth2-item story"><a href="jsr_2_3.html" class="gnb-depth2-link">음식</a></li>
+            <li class="gnb-depth2-item story"><a href="jsr_2_2_1.html" class="gnb-depth2-link">명소</a></li>
+            <li class="gnb-depth2-item story"><a href="jsr_2_4_1.html" class="gnb-depth2-link">체험</a></li>
+            <li class="gnb-depth2-item story"><a href="jsr_2_5_1.html" class="gnb-depth2-link">숙박</a></li>
           </ul>
         </div>
       </li>
 
       <li class="gnb-depth1-item">
-        <a href="#" class="gnb-depth1-link">종로길잡이</a>
+        <a href="jsr_3_1.html" class="gnb-depth1-link">종로길잡이</a>
         <div class="gnb-depth2-wrap">
           <ul class="gnb-depth2">
-            <li class="gnb-depth2-item guide"><a href="#" class="gnb-depth2-link">길잡이선택</a></li>
+            <li class="gnb-depth2-item guide"><a href="jsr_3_1.html" class="gnb-depth2-link">길잡이선택</a></li>
           </ul>
         </div>
       </li>
 
       <li class="gnb-depth1-item">
-        <a href="#" class="gnb-depth1-link">종로와소통</a>
+        <a href="jsr_4_1.html" class="gnb-depth1-link">종로와소통</a>
         <div class="gnb-depth2-wrap">
           <ul class="gnb-depth2">
-            <li class="gnb-depth2-item communication"><a href="#" class="gnb-depth2-link">TIP</a></li>
-            <li class="gnb-depth2-item communication"><a href="#" class="gnb-depth2-link">후기</a></li>
-            <li class="gnb-depth2-item communication"><a href="#" class="gnb-depth2-link">FAQ</a></li>
+            <li class="gnb-depth2-item communication"><a href="jsr_4_1.html" class="gnb-depth2-link">TIP</a></li>
+            <li class="gnb-depth2-item communication"><a href="jsr_4_2_1.html" class="gnb-depth2-link">후기</a></li>
+            <li class="gnb-depth2-item communication"><a href="jsr_4_3.html" class="gnb-depth2-link">FAQ</a></li>
           </ul>
         </div>
       </li>
     </ul>
   </nav>
-  <ul class="gnb-language">
-    <li class="gnb-language-item"><a href="#" class="gnb-language-link">KOR</a></li>
-    <li class="gnb-language-item"><a href="#" class="gnb-language-link">JPN</a></li>
-    <li class="gnb-language-item"><a href="#" class="gnb-language-link">ENG</a></li>
-    <li class="gnb-language-item"><a href="#" class="gnb-language-link">CHI</a></li>
-  </ul>
 </header>
 
 <script>
   // 페이지 구분용 변수
-  var page = 'sub';
+  var depth1 = 'sub1';
+  var depth2 = 'sub1-2';
 </script>
 
-<section class="section experience">
+<section class="section food">
   <div class="inner-box">
     <div class="title">
       <h2 class="title-kor">음식</h2>
@@ -71,53 +67,38 @@
     <section class="content">
       <ul class="content-list">
         <li class="content-item">
-          <img src="../images/at_image_1.jpg" alt="" class="content-link-img" />
-          <h3 class="content-item-name">구절판</h3>
-          <p class="content-item-text">구절판찬합에 담아 먹는 우리나라 고유의 음식. 둘레의 여덟 칸에 각각 여덟 가지 음식을 담아 먹는다.</p>
+          <img src="../images/fd_image_1.jpg" alt="" class="content-link-img" />
+          <div class="content-item-wrap">
+            <h3 class="content-item-name">구절판</h3>
+            <p class="content-item-text">구절판찬합에 담아 먹는 우리나라 고유의 음식. 둘레의 여덟 칸에 각각 여덟 가지 음식을 담아 먹는다.</p>
+          </div>
         </li>
 
         <li class="content-item">
-          <img src="../images/at_image_2.jpg" alt="" class="content-link-img" />
-          <h3 class="content-item-name">불고기</h3>
-          <p class="content-item-text">쇠고기를 얇게 썰어 양념장에 재웠다가 구워 먹는 음식으로 한국을 대표하는 전통음식 중의 하나이다.</p>
+          <img src="../images/fd_image_2.jpg" alt="" class="content-link-img" />
+          <div class="content-item-wrap">
+            <h3 class="content-item-name">불고기</h3>
+            <p class="content-item-text">쇠고기를 얇게 썰어 양념장에 재웠다가 구워 먹는 음식으로 한국을 대표하는 전통음식 중의 하나이다.</p>
+          </div>
         </li>
 
         <li class="content-item">
-          <img src="../images/at_image_3.jpg" alt="" class="content-link-img" />
-          <h3 class="content-item-name">비빔밥</h3>
-          <p class="content-item-text">고기와 나물 등과 여러 가지 양념을 넣어 비벼 먹는 음식으로 섣달 그믐날 해 먹던 음식 중 하나이다.</p>
+          <img src="../images/fd_image_3.jpg" alt="" class="content-link-img" />
+          <div class="content-item-wrap">
+            <h3 class="content-item-name">비빔밥</h3>
+            <p class="content-item-text">고기와 나물 등과 여러 가지 양념을 넣어 비벼 먹는 음식으로 섣달 그믐날 해 먹던 음식 중 하나이다.</p>
+          </div>
         </li>
 
         <li class="content-item">
-          <img src="../images/at_image_4.jpg" alt="" class="content-link-img" />
-          <h3 class="content-item-name">삼계탕</h3>
-          <p class="content-item-text">여름철에 보신하기 위하여 닭에 인삼을 넣고 푹 고아서 먹는 한국 전통 보양식이다.</p>
-        </li>
-
-        <li class="content-item">
-          <img src="../images/at_image_5.jpg" alt="" class="content-link-img" />
-          <h3 class="content-item-name">수정과</h3>
-          <p class="content-item-text">계피 · 생강을 달인 물에 설탕을 타서 차게 식힌 후 곶감 · 잣 등의 건지를 띄운 것으로 전통음료이다.</p>
-        </li>
-
-        <li class="content-item">
-          <img src="../images/at_image_6.jpg" alt="" class="content-link-img" />
-          <h3 class="content-item-name">신선로</h3>
-          <p class="content-item-text">신선이 쓰는 화로라는 뜻으로 화로에 숯불을 담아 끓여 먹는 음식이다.</p>
-        </li>
-
-        <li class="content-item">
-          <img src="../images/at_image_7.jpg" alt="" class="content-link-img" />
-          <h3 class="content-item-name">잡채</h3>
-          <p class="content-item-text">삶은 당면에 여러 가지 채소를 볶아 넣고 함께 무쳐서 만든 음식이다. 잡채는 잔치나 명절상에 가장 흔히 올리는 음식이다.</p>
+          <img src="../images/fd_image_4.jpg" alt="" class="content-link-img" />
+          <div class="content-item-wrap">
+            <h3 class="content-item-name">신선로</h3>
+            <p class="content-item-text">신선이 쓰는 화로라는 뜻으로 화로에 숯불을 담아 끓여 먹는 음식이다.</p>
+          </div>
         </li>
       </ul>
     </section>
-
-    <div class="arrow">
-      <input type="button" class="arrow-left" value="left"  />
-      <input type="button" class="arrow-right" value="right" />
-    </div>
 
   </div>
 </section>
@@ -130,7 +111,12 @@
 
     All Rights Reserved.</div>
 
-  <a href="#" class="footer-style-guide">Style Guide</a>
+  <a href="jsr_guide.html" class="footer-style-guide">Style Guide</a>
 
 </footer>
 
+
+
+</body>
+
+</html>

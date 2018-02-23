@@ -1,5 +1,6 @@
 .detail{
   background: url("../images/2_2_2_detail.png")no-repeat fixed;
+  min-height: 1458px;
 }
 
 .title{
@@ -27,16 +28,18 @@
 }
 
 .content{
-
 }
 
 .data{
+  @extend %clearfix;
 
   &-image{
     float: left;
   }
 
   &-wrap{
+    float: right;
+    width: 500px;
 
     &-title{
       font-size: 25px;
@@ -49,14 +52,14 @@
       margin: 36px 0 36px 0;
 
       &-item{
-        font-size: 20px;
+        font-size: 18px;
         float: left;
-        margin: 0 55px 0 80px;
+        margin: 0 45px 0 55px;
         width: 80px;
       }
 
       &-text{
-        font-size: 20px;
+        font-size: 18px;
       }
 
     }
@@ -74,59 +77,93 @@
 
 .slide{
 
+  &-w{
+    position: relative;
+  }
+
   &-wrap{
+    width:850px;
+    height:448px;
+    overflow: hidden;
 
     position: relative;
 
     &-bigimage{
       width: 850px;
       height: 448px;
-      margin-bottom: 14px;
-    }
+      //margin-bottom: 14px;
 
-    &-list{
-
-      &-item{
-        width: 202px;
-        height: 128px;
-        overflow: hidden;
-        float: left;
-        margin-right: 14px;
-      }
-
-      &-item:last-child{
-        margin-right: 0;
-      }
-
-      &-image{
-        width:auto;
-        height:100%;
-      }
+      position: absolute;
+      left: 0;
 
     }
 
   }
 
-  &-wrap:after{
-    content: "";
-    display: block;
-    width: 33px;
-    height: 50px;
-    background: url(../images/image_sprite.png) no-repeat -265px -170px;
-    position: absolute;
-    top: 460px;
-    left: -63px;
+  &-arrow{
+    width:100%;
+    position:relative;
+    top: -255px;
+
+    &-left{
+      background:url(../images/image_sprite.png) no-repeat -265px -170px;
+      border:0;
+      width:34px;
+      height:50px;
+      position:absolute;
+      margin-left:-64px;
+      text-indent:-99999px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    &-right{
+      background:url(../images/image_sprite.png) no-repeat -300px -170px;
+      border:0;
+      width:34px;
+      height:50px;
+      right:0;
+      position:absolute;
+      margin-right:-64px;
+      text-indent:-99999px;
+      cursor: pointer;
+      outline: none;
+    }
   }
 
-  &-wrap:before{
-    content: "";
-    display: block;
-    width: 33px;
-    height: 50px;
-    background: url(../images/image_sprite.png) no-repeat -300px -170px;
-    position: absolute;
-    top: 460px;
-    left: 880px;
+  &-list{
+    padding-bottom: 92px;
+    @extend %clearfix;
+
+    &-item{
+      width: 202px;
+      height: 128px;
+      overflow: hidden;
+      float: left;
+      margin: 14px 14px 0 0;
+
+      &:hover>.slide-list-image{
+        transform: scale(1.2,1.2);
+      }
+
+    }
+
+    &-item:last-child{
+      margin-right: 0;
+    }
+
+
+    &-image{
+      width: 202px;
+      height:100%;
+
+      transition: transform 1s ease-out;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
   }
 
 }

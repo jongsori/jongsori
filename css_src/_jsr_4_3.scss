@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9ffbd31b867b882a5a367c7838900e2d5e543bf5
 .section {
 
 
@@ -8,13 +11,23 @@
     height: 100%;
     background: url(../images/image_bg.jpg) no-repeat center fixed;
 
+<<<<<<< HEAD
     .faq {
+=======
+    &-list {
+      border-top: 2px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      box-sizing: border-box;
+      position:relative;
+
+>>>>>>> 9ffbd31b867b882a5a367c7838900e2d5e543bf5
 
       &-list {
         border-top: 2px solid #ddd;
         border-bottom: 2px solid #ddd;
         box-sizing: border-box;
 
+<<<<<<< HEAD
         &-item {
           height: 100%;
           border-bottom: 1px solid #ddd;
@@ -50,6 +63,59 @@
             background: url(../images/image_sprite.png) no-repeat -293px -255px;
 
           }
+=======
+        &:before {
+          content: "";
+          display: block;
+          width: 72px;
+          border: 1px solid #d7d7d7;
+          box-sizing: border-box;
+          position: absolute;
+          margin-top:50px;
+        }
+
+
+      }
+
+      &-link {
+        display:block;
+        font-size: 20px;
+        color: #fff;
+        margin-left: 80px;
+        line-height: 104px;
+        box-sizing:border-box;
+        clear:both;
+
+
+
+        &:hover{
+          color:#ffcd12;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          width: 26px;
+          height: 14px;
+          float: right;
+          position: relative;
+          top: 45px;
+          right: 32px;
+          background: url(../images/image_sprite.png) no-repeat -293px -255px;
+
+        }
+
+        &.up:after{
+          content: "";
+          display: block;
+          width: 26px;
+          height: 14px;
+          float: right;
+          position: relative;
+          top: 45px;
+          right: 32px;
+          background: url(../images/image_sprite.png) no-repeat -265px -255px;
+>>>>>>> 9ffbd31b867b882a5a367c7838900e2d5e543bf5
         }
 
         &-detail {
@@ -65,7 +131,15 @@
             //border-bottom:1px solid #ffcd12;
             box-sizing: border-box;
 
+<<<<<<< HEAD
           }
+=======
+        &-wrap {
+          background: rgba(128, 128, 128, 0.3);
+          padding: 30px 90px;
+          border-top: 1px solid #ffcd12;
+          box-sizing: border-box;
+>>>>>>> 9ffbd31b867b882a5a367c7838900e2d5e543bf5
 
           &-contents {
             line-height: 2em;
@@ -74,12 +148,31 @@
           }
 
           &-heading {
+<<<<<<< HEAD
+=======
+            display:inline;
+>>>>>>> 9ffbd31b867b882a5a367c7838900e2d5e543bf5
             font-size: 20px;
             color: #fff;
             font-weight: bold;
           }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9ffbd31b867b882a5a367c7838900e2d5e543bf5
         }
+
+
       }
     }
   }
+}
+
+.faqmain {
+  width: 100%;
+  min-height: 100%;
+  min-width:1090px;
+  background: url(../images/4-1-bg.jpg) no-repeat center fixed;
+  position:absolute;
+
 }

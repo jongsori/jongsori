@@ -1,61 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"  charset="UTF-8">
   <title></title>
   <link rel="stylesheet" href="../css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Kanit:700" rel="stylesheet">
   <script src="../js/lib/jquery-3.2.1.min.js"></script>
+  <script src="../js/lib/jquery-ui.min.js"></script>
   <script src="../js/gnb.js"></script>
 </head>
 <body>
 
 <header class="gnb">
-  <h1 class="gnb-logo"><a href="#" class="gnb-logo-link">JongSoRi</a></h1>
+  <h1 class="gnb-logo"><a href="jsr_1.html" class="gnb-logo-link">JongSoRi</a></h1>
   <nav class="gnb-menu">
     <ul class="gnb-depth1">
       <li class="gnb-depth1-item">
-        <a href="#" class="gnb-depth1-link">종로이야기</a>
+        <a href="jsr_2_1.html" class="gnb-depth1-link">종로이야기</a>
         <div class="gnb-depth2-wrap">
           <ul class="gnb-depth2">
-            <li class="gnb-depth2-item story"><a href="#" class="gnb-depth2-link">종로에대해서</a></li>
-            <li class="gnb-depth2-item story"><a href="#" class="gnb-depth2-link">명소</a></li>
-            <li class="gnb-depth2-item story"><a href="#" class="gnb-depth2-link">음식</a></li>
-            <li class="gnb-depth2-item story"><a href="#" class="gnb-depth2-link">체험</a></li>
-            <li class="gnb-depth2-item story"><a href="#" class="gnb-depth2-link">숙박</a></li>
+            <li class="gnb-depth2-item story"><a href="jsr_2_1.html" class="gnb-depth2-link">종로에대해서</a></li>
+            <li class="gnb-depth2-item story"><a href="jsr_2_3.html" class="gnb-depth2-link">음식</a></li>
+            <li class="gnb-depth2-item story"><a href="jsr_2_2_1.html" class="gnb-depth2-link">명소</a></li>
+            <li class="gnb-depth2-item story"><a href="jsr_2_4_1.html" class="gnb-depth2-link">체험</a></li>
+            <li class="gnb-depth2-item story"><a href="jsr_2_5_1.html" class="gnb-depth2-link">숙박</a></li>
           </ul>
         </div>
       </li>
 
       <li class="gnb-depth1-item">
-        <a href="#" class="gnb-depth1-link">종로길잡이</a>
+        <a href="jsr_3_1.html" class="gnb-depth1-link">종로길잡이</a>
         <div class="gnb-depth2-wrap">
           <ul class="gnb-depth2">
-            <li class="gnb-depth2-item guide"><a href="#" class="gnb-depth2-link">길잡이선택</a></li>
+            <li class="gnb-depth2-item guide"><a href="jsr_3_1.html" class="gnb-depth2-link">길잡이선택</a></li>
           </ul>
         </div>
       </li>
 
       <li class="gnb-depth1-item">
-        <a href="#" class="gnb-depth1-link">종로와소통</a>
+        <a href="jsr_4_1.html" class="gnb-depth1-link">종로와소통</a>
         <div class="gnb-depth2-wrap">
           <ul class="gnb-depth2">
-            <li class="gnb-depth2-item communication"><a href="#" class="gnb-depth2-link">TIP</a></li>
-            <li class="gnb-depth2-item communication"><a href="#" class="gnb-depth2-link">후기</a></li>
-            <li class="gnb-depth2-item communication"><a href="#" class="gnb-depth2-link">FAQ</a></li>
+            <li class="gnb-depth2-item communication"><a href="jsr_4_1.html" class="gnb-depth2-link">TIP</a></li>
+            <li class="gnb-depth2-item communication"><a href="jsr_4_2_1.html" class="gnb-depth2-link">후기</a></li>
+            <li class="gnb-depth2-item communication"><a href="jsr_4_3.html" class="gnb-depth2-link">FAQ</a></li>
           </ul>
         </div>
       </li>
     </ul>
   </nav>
-  <ul class="gnb-language">
-    <li class="gnb-language-item"><a href="#" class="gnb-language-link">KOR</a></li>
-    <li class="gnb-language-item"><a href="#" class="gnb-language-link">JPN</a></li>
-    <li class="gnb-language-item"><a href="#" class="gnb-language-link">ENG</a></li>
-    <li class="gnb-language-item"><a href="#" class="gnb-language-link">CHI</a></li>
-  </ul>
 </header>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <script>
@@ -64,6 +60,13 @@
 </script>
 
 >>>>>>> bc83f5b7c670eb0651025b3ce514e61382064d53
+=======
+<script>
+  var depth1 = 'sub2';
+  var depth2 = 'sub2';
+</script>
+
+>>>>>>> 9ffbd31b867b882a5a367c7838900e2d5e543bf5
 <section class="section quick-guide">
   <div class="inner-box">
 
@@ -73,19 +76,118 @@
     </div>
 
     <div class="map">
-      <ul class="map-list">
-        <li class="map-list-item">
-          <img src="../images/course1.png" class="map-list-item-map map1" />
-          <!--<img src="../images/course2.png" class="map-list-item-map map2" />-->
-          <!--<img src="../images/course3.png" class="map-list-item-map map3" />-->
-          <!--<img src="../images/course4.png" class="map-list-item-map map4" />-->
-          <!--<img src="../images/course5.png" class="map-list-item-map map5" />-->
-        </li>
-      </ul>
+      <div id="map" style="width:850px; height:498px;"></div>
+      <script>
+
+        var flightPlanCoordinates = [];
+        var initCenter = {lat: 37.573641, lng: 126.979538};
+        var map;
+
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: initCenter,
+            mapTypeId: 'roadmap'
+          });
+
+          var flightPath = new google.maps.Polyline({
+            path: flightPlanCoordinates,
+            geodesic: true,
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 2
+          });
+
+          flightPath.setMap(map);
+        }
+
+
+        $(function(){
+
+          var course = [
+              [
+                {lat:37.572046 , lng:126.983381},
+                {lat:37.574257 , lng:126.984787},
+                {lat:37.574859 , lng:126.990586},
+                {lat:37.574574 , lng:126.994111},
+                {lat:37.579428 , lng:126.991044},
+                {lat:37.578703 , lng:126.994861}
+              ],
+              [
+                {lat:37.579626 , lng:126.977038},
+                {lat:37.581644 , lng:126.978992},
+                {lat:37.583537 , lng:126.981774},
+                {lat:37.579414 , lng:126.990989}
+              ],
+              [
+                {lat:37.566716 , lng:127.009549},
+                {lat:37.568380 , lng:127.008684},
+                {lat:37.570204 , lng:126.999319},
+                {lat:37.574574 , lng:126.994111}
+              ],
+              [
+                {lat:37.582264 , lng:127.001758},
+                {lat:37.580531 , lng:127.002789},
+                {lat:37.580709 , lng:127.007461},
+                {lat:37.580730 , lng:127.006298},
+                {lat:37.578703 , lng:126.994861}
+              ],
+              [
+                {lat:37.569229 , lng:126.977882},
+                {lat:37.579068 , lng:126.980478},
+                {lat:37.579082 , lng:126.986462},
+                {lat:37.579626 , lng:126.977038}
+              ]
+          ];
+
+
+          $('input[type=radio]').on('change', function(){
+
+            var sumLat = 0;
+            var sumLng = 0;
+            var avgLat;
+            var avgLng;
+            var marker = [];
+
+            var radioIndex = $(this).index( 'input[type=radio]' );
+
+            flightPlanCoordinates = course[radioIndex];
+
+            for(var i=0; i<course[radioIndex].length; i++){
+              sumLat += course[radioIndex][i].lat;
+              sumLng += course[radioIndex][i].lng;
+
+              marker[i] = new google.maps.Marker({
+                position: course[radioIndex][i],
+              });
+
+            }
+
+            avgLat = sumLat / course[radioIndex].length;
+            avgLng = sumLng / course[radioIndex].length;
+
+            initMap();
+            map.setCenter({lat: avgLat, lng: avgLng});
+
+            for(var j=0; j<marker.length;j++){
+              marker[j].setMap(map);
+            }
+
+          });
+
+        });
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfFQYjP4NBkHalxFA_7mYs9Xw9XTCiuVE&callback=initMap"></script>
     </div>
 
     <div class="course">
-      <div class="course-select" title="하단의 코스를 선택하면 선택된 코스의 경로가 표시됩니다.">코스를 선택하세요.</div>
+
+      <div class="course-view">
+        <div class="course-select" title="하단의 코스를 선택하면 선택된 코스의 경로가 표시됩니다.">
+          코스를 선택하세요.
+        </div>
+      </div>
+
       <ul class="course-list">
         <li class="course-list-item">
           <input id="insa" type="radio" value="인사동코스" name="course"/>
@@ -120,7 +222,12 @@
 
     All Rights Reserved.</div>
 
-  <a href="#" class="footer-style-guide">Style Guide</a>
+  <a href="jsr_guide.html" class="footer-style-guide">Style Guide</a>
 
 </footer>
 
+
+
+</body>
+
+</html>
